@@ -718,47 +718,78 @@ export default function HomePage() {
 
       {/* ── ABOUT + BOOKING FORM — EEAT Trustworthiness + Conversion ── */}
       <section className="about-section" aria-labelledby="about-heading">
-        <div className="container">
+        <div className="about-bg-overlay" aria-hidden="true"></div>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="about-content-grid">
+
+            {/* ── LEFT: About Text ── */}
             <div className="about-text-col">
-              <h2 id="about-heading" className="title">
-                About <span className="text-highlight">Hot Natasha</span> — Pune&apos;s Premium Escort Service
+              <span className="about-label">Since 2014 · Pune&apos;s #1</span>
+              <h2 id="about-heading" className="about-heading">
+                About <span className="text-highlight">Hot Natasha</span><br />
+                Pune&apos;s Premium Escort Service
               </h2>
-              <div className="diamond-line-left" aria-hidden="true"></div>
-              <p>
-                <strong>Hot Natasha</strong> has been Pune&apos;s most trusted escort service since 2014 — built on trust,
-                discretion, and excellence. Over 10+ years, we have earned the loyalty of 7,000+ clients across Pune, from
-                Koregaon Park to Hinjewadi, Shivajinagar to Magarpatta.
-              </p>
-              <p>
-                Every escort in our network undergoes a rigorous personal verification process — we confirm identity, health,
-                and professionalism before any escort is listed. This commitment to quality is why our clients consistently
-                rate us <strong>4.9 out of 5</strong>.
-              </p>
-              <h3 className="subtitle">Our Commitment to Quality, Safety &amp; Discretion</h3>
-              <p>
-                We operate with full transparency and legal compliance. Our team is reachable 24/7, our escort profiles are
-                genuine and verified, and every booking is handled with utmost professionalism and complete confidentiality.
-                Hot Natasha is Pune&apos;s most authoritative and experienced escort service — trusted by thousands.
-              </p>
-              <div className="eeat-badges">
-                <div className="eeat-badge"><i className="fa fa-shield" aria-hidden="true"></i> <span>Legally Compliant</span></div>
-                <div className="eeat-badge"><i className="fa fa-check-circle" aria-hidden="true"></i> <span>Verified Profiles</span></div>
-                <div className="eeat-badge"><i className="fa fa-lock" aria-hidden="true"></i> <span>Data Protected</span></div>
-                <div className="eeat-badge"><i className="fa fa-calendar" aria-hidden="true"></i> <span>Trusted Since 2014</span></div>
+              <div className="about-divider" aria-hidden="true"></div>
+
+              <div className="about-quick-stats">
+                <div className="about-qs-item">
+                  <strong>7,000+</strong><span>Happy Clients</span>
+                </div>
+                <div className="about-qs-sep" aria-hidden="true"></div>
+                <div className="about-qs-item">
+                  <strong>4.9 / 5</strong><span>Trust Rating</span>
+                </div>
+                <div className="about-qs-sep" aria-hidden="true"></div>
+                <div className="about-qs-item">
+                  <strong>10+ Yrs</strong><span>Experience</span>
+                </div>
               </div>
+
+              <p className="about-para">
+                <strong>Hot Natasha</strong> has been Pune&apos;s most trusted escort service since 2014 — built on
+                trust, discretion, and excellence. Over 10+ years, we have earned the loyalty of 7,000+ clients
+                across Pune, from Koregaon Park to Hinjewadi, Shivajinagar to Magarpatta.
+              </p>
+              <p className="about-para">
+                Every escort undergoes a rigorous personal verification process — identity, health, and
+                professionalism confirmed before listing. This is why clients consistently rate us <strong>4.9 / 5</strong>.
+              </p>
+
+              <ul className="about-features-list">
+                <li><i className="fa fa-shield" aria-hidden="true"></i> Legally Compliant &amp; Fully Transparent</li>
+                <li><i className="fa fa-check-circle" aria-hidden="true"></i> 100% Personally Verified Escorts</li>
+                <li><i className="fa fa-lock" aria-hidden="true"></i> Your Data is Always Protected</li>
+                <li><i className="fa fa-clock-o" aria-hidden="true"></i> Available 24/7 Across All Pune Areas</li>
+                <li><i className="fa fa-star" aria-hidden="true"></i> Trusted by 7,000+ Satisfied Clients</li>
+              </ul>
+
               <div className="about-cta-btns">
                 <Link href="/booknow" className="btn btn-primary">
                   Book Now &nbsp;<i className="fa fa-calendar" aria-hidden="true"></i>
                 </Link>
-                <Link href="/about-us" className="btn btn-outline-dark">
-                  About Us &nbsp;<i className="fa fa-arrow-right" aria-hidden="true"></i>
-                </Link>
+                <a href={`tel:${siteConfig.phone}`} className="btn btn-outline-light">
+                  <i className="fa fa-phone" aria-hidden="true"></i>&nbsp; Call Now
+                </a>
               </div>
             </div>
+
+            {/* ── RIGHT: Premium Booking Form ── */}
             <div className="about-form-col">
-              <BookingForm variant="sidebar" />
+              <div className="about-form-card">
+                <div className="about-form-card-header">
+                  <i className="fa fa-calendar-check-o" aria-hidden="true"></i>
+                  <h3>Book Your Experience</h3>
+                  <p>Fast, discreet &amp; confirmed in minutes</p>
+                </div>
+                <BookingForm variant="sidebar" title="" />
+                <div className="about-form-trust">
+                  <span><i className="fa fa-lock" aria-hidden="true"></i> 100% Confidential</span>
+                  <span><i className="fa fa-shield" aria-hidden="true"></i> Verified Service</span>
+                  <span><i className="fa fa-clock-o" aria-hidden="true"></i> 24/7 Available</span>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
