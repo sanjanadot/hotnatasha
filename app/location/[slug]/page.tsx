@@ -99,6 +99,223 @@ const allServices = [
   { slug: 'actress-escorts',      name: 'Actress Escorts',       image: '/images/services/celebrity-escorts.webp' },
 ];
 
+const metroLocations = [
+  { name: 'Pune',      slug: 'pune',      image: '/images/location/escorts-in-pune.webp' },
+  { name: 'Mumbai',    slug: 'mumbai',    image: '/images/location/escorts-in-mumbai.webp' },
+  { name: 'Delhi',     slug: 'delhi',     image: '/images/location/escorts-in-delhi.webp' },
+  { name: 'Bangalore', slug: 'bangalore', image: '/images/location/escorts-in-bangalore.webp' },
+  { name: 'Hyderabad', slug: 'hyderabad', image: '/images/hyderabad/escorts-in-hyderabad.webp' },
+  { name: 'Ahmedabad', slug: 'ahmedabad', image: '/images/location/escorts-in-ahmedabad.webp' },
+  { name: 'Jaipur',    slug: 'jaipur',    image: '/images/location/escorts-in-jaipur.webp' },
+  { name: 'Lucknow',   slug: 'lucknow',   image: '/images/location/escorts-in-lucknow.webp' },
+  { name: 'Gurgaon',   slug: 'gurgaon',   image: '/images/location/escorts-in-gurgaon.webp' },
+  { name: 'Noida',     slug: 'noida',     image: '/images/location/escorts-in-noida.webp' },
+  { name: 'Indore',    slug: 'indore',    image: '/images/location/escorts-in-indore.webp' },
+  { name: 'Bhopal',    slug: 'bhopal',    image: '/images/location/escorts-in-bhopal.webp' },
+  { name: 'Goa',       slug: 'goa',       image: '/images/location/escorts-in-goa.webp' },
+  { name: 'Ranchi',    slug: 'ranchi',    image: '/images/location/escorts-in-ranchi.webp' },
+  { name: 'Nashik',    slug: 'nashik',    image: '/images/location/escorts-in-nashik.webp' },
+  { name: 'Surat',     slug: 'surat',     image: '/images/location/escorts-in-surat.webp' },
+  { name: 'Vadodara',  slug: 'vadodara',  image: '/images/location/escorts-in-vadodara.webp' },
+  { name: 'Kanpur',    slug: 'kanpur',    image: '/images/location/escorts-in-kanpur.webp' },
+  { name: 'Varanasi',  slug: 'varanasi',  image: '/images/location/escorts-in-varanasi.webp' },
+];
+
+// Maps each metro city slug → its sub-area slugs/names
+const cityAreasMap: Record<string, { name: string; slug: string }[]> = {
+  pune: [
+    { name: 'Koregaon Park',    slug: 'koregaon-park' },    { name: 'Hinjawadi',        slug: 'hinjawadi' },
+    { name: 'Shivaji Nagar',    slug: 'shivaji-nagar' },    { name: 'Baner',            slug: 'baner' },
+    { name: 'Kothrud',          slug: 'kothrud' },           { name: 'Viman Nagar',      slug: 'viman-nagar' },
+    { name: 'Hadapsar',         slug: 'hadapsar' },          { name: 'Kharadi',          slug: 'kharadi' },
+    { name: 'Wakad',            slug: 'wakad' },             { name: 'Aundh',            slug: 'aundh' },
+    { name: 'Deccan',           slug: 'deccan' },            { name: 'Chinchwad',        slug: 'chinchwad' },
+    { name: 'Magarpatta',       slug: 'magarpatta' },        { name: 'Kalyani Nagar',    slug: 'kalyani-nagar' },
+    { name: 'Wadgaon Sheri',    slug: 'wadgaon-sheri' },    { name: 'Pashan',           slug: 'pashan' },
+    { name: 'Katraj',           slug: 'katraj' },            { name: 'Kondhwa',          slug: 'kondhwa' },
+    { name: 'Swargate',         slug: 'swargate' },          { name: 'Shaniwar Wada',    slug: 'shaniwar-wada' },
+    { name: 'Karve Nagar',      slug: 'karve-nagar' },      { name: 'Yerwada',          slug: 'yerwada' },
+    { name: 'Wagholi',          slug: 'wagholi' },           { name: 'Akurdi',           slug: 'akurdi' },
+    { name: 'Bhosari',          slug: 'bhosari' },           { name: 'Boat Club Road',   slug: 'boat-club-road' },
+    { name: 'Chakan',           slug: 'chakan' },            { name: 'Dattawadi',        slug: 'dattawadi' },
+    { name: 'Dehu Road',        slug: 'dehu-road' },         { name: 'Dighi',            slug: 'dighi' },
+    { name: 'Ghorpadi',         slug: 'ghorpadi' },          { name: 'Khadki',           slug: 'khadki' },
+    { name: 'Lohegaon',         slug: 'lohegaon' },          { name: 'Lonawala',         slug: 'lonawala' },
+    { name: 'Malewadi',         slug: 'malewadi' },          { name: 'Model Colony',     slug: 'model-colony' },
+    { name: 'Nigdi',            slug: 'nigdi' },             { name: 'Phursungi',        slug: 'phursungi' },
+    { name: 'Pimple Gurav',     slug: 'pimple-gurav' },     { name: 'Pimple Saudagar',  slug: 'pimple-saudagar' },
+    { name: 'Pune Nagar Road',  slug: 'pune-nagar-road' },  { name: 'Ravet',            slug: 'ravet' },
+    { name: 'Shivane',          slug: 'shivane' },           { name: 'Shukrawar Peth',   slug: 'shukrawar-peth' },
+    { name: 'Talawade',         slug: 'talawade' },          { name: 'Bibwewadi',        slug: 'bibwewadi' },
+    { name: 'Dhole Patil Nagar',slug: 'dhole-patil-nagar' },{ name: 'Khandala',         slug: 'khandala' },
+    { name: 'Yewalewadi',       slug: 'yewalewadi' },
+  ],
+  mumbai: [
+    { name: 'Andheri',       slug: 'andheri' },       { name: 'Bandra',          slug: 'bandra' },
+    { name: 'Juhu',          slug: 'juhu' },          { name: 'Worli',           slug: 'worli' },
+    { name: 'Powai',         slug: 'powai' },         { name: 'Dadar',           slug: 'dadar' },
+    { name: 'Malad',         slug: 'malad' },         { name: 'Borivali',        slug: 'borivali' },
+    { name: 'Thane',         slug: 'thane' },         { name: 'Navi Mumbai',     slug: 'navi-mumbai' },
+    { name: 'Mumbai Central',slug: 'mumbai-central' },{ name: 'Mumbai Airport',  slug: 'mumbai-airport' },
+  ],
+  delhi: [
+    { name: 'Connaught Place',  slug: 'connaught-place' },   { name: 'Lajpat Nagar',    slug: 'lajpat-nagar' },
+    { name: 'Saket',            slug: 'saket' },             { name: 'Dwarka',           slug: 'dwarka' },
+    { name: 'Rohini',           slug: 'rohini' },            { name: 'Pitampura',        slug: 'pitampura' },
+    { name: 'New Delhi',        slug: 'new-delhi' },         { name: 'Delhi Civil Lines',slug: 'delhi-civil-lines' },
+    { name: 'Vaishali',         slug: 'vaishali' },          { name: 'Vasundhara',       slug: 'vasundhara' },
+    { name: 'Indirapuram',      slug: 'indirapuram' },       { name: 'Delhi Chakla',     slug: 'delhi-chakla' },
+  ],
+  bangalore: [
+    { name: 'Koramangala',   slug: 'koramangala' },   { name: 'Indiranagar',    slug: 'indiranagar' },
+    { name: 'Whitefield',    slug: 'whitefield' },    { name: 'Jayanagar',      slug: 'jayanagar' },
+    { name: 'Marathahalli',  slug: 'marathahalli' },  { name: 'Electronic City',slug: 'electronic-city' },
+  ],
+  jaipur: [
+    { name: 'Ashok Nagar',   slug: 'ashok-nagar-jaipur' },   { name: 'Civil Lines',    slug: 'civil-lines-jaipur' },
+    { name: 'Malviya Nagar', slug: 'malviya-nagar-jaipur' },  { name: 'Subhash Nagar',  slug: 'subhash-nagar-jaipur' },
+    { name: 'Tilak Nagar',   slug: 'tilak-nagar-jaipur' },   { name: 'Vaishali Nagar', slug: 'vaishali-nagar-jaipur' },
+  ],
+  gurgaon: [
+    { name: 'Cyber City',      slug: 'cyber-city' },      { name: 'DLF Phase 1',    slug: 'dlf-phase-1' },
+    { name: 'DLF Phase 2',     slug: 'dlf-phase-2' },     { name: 'DLF Phase 3',    slug: 'dlf-phase-3' },
+    { name: 'DLF Phase 4',     slug: 'dlf-phase-4' },     { name: 'DLF Phase 5',    slug: 'dlf-phase-5' },
+    { name: 'Golf Course Road',slug: 'golf-course-road' },{ name: 'Sohna Road',     slug: 'sohna-road' },
+    { name: 'Sector 14',       slug: 'sector-14' },       { name: 'Sector 15',      slug: 'sector-15' },
+    { name: 'Sector 17',       slug: 'sector-17' },       { name: 'Sector 22',      slug: 'sector-22' },
+    { name: 'Sector 23',       slug: 'sector-23' },       { name: 'Sector 24',      slug: 'sector-24' },
+    { name: 'Sector 29',       slug: 'sector-29' },       { name: 'Sector 31',      slug: 'sector-31' },
+    { name: 'Sector 40',       slug: 'sector-40' },       { name: 'Sector 43',      slug: 'sector-43' },
+    { name: 'Sector 45',       slug: 'sector-45' },       { name: 'Sector 46',      slug: 'sector-46' },
+    { name: 'Sector 49',       slug: 'sector-49' },       { name: 'Sector 50',      slug: 'sector-50' },
+    { name: 'Sector 52',       slug: 'sector-52' },       { name: 'Sector 53',      slug: 'sector-53' },
+    { name: 'Sector 54',       slug: 'sector-54' },       { name: 'Sector 55',      slug: 'sector-55' },
+    { name: 'Sector 56',       slug: 'sector-56' },       { name: 'Sector 57',      slug: 'sector-57' },
+    { name: 'Sector 82',       slug: 'sector-82' },
+  ],
+  noida: [
+    { name: 'Phase 2',   slug: 'noida-phase-2' },   { name: 'Sector 12',  slug: 'noida-sector-12' },
+    { name: 'Sector 15', slug: 'noida-sector-15' },  { name: 'Sector 16',  slug: 'noida-sector-16' },
+    { name: 'Sector 17', slug: 'noida-sector-17' },  { name: 'Sector 18',  slug: 'noida-sector-18' },
+    { name: 'Sector 19', slug: 'noida-sector-19' },  { name: 'Sector 22',  slug: 'noida-sector-22' },
+    { name: 'Sector 25', slug: 'noida-sector-25' },  { name: 'Sector 26',  slug: 'noida-sector-26' },
+    { name: 'Sector 27', slug: 'noida-sector-27' },  { name: 'Sector 28',  slug: 'noida-sector-28' },
+    { name: 'Sector 31', slug: 'noida-sector-31' },  { name: 'Sector 32',  slug: 'noida-sector-32' },
+    { name: 'Sector 34', slug: 'noida-sector-34' },  { name: 'Sector 39',  slug: 'noida-sector-39' },
+    { name: 'Sector 43', slug: 'noida-sector-43' },  { name: 'Sector 44',  slug: 'noida-sector-44' },
+    { name: 'Sector 45', slug: 'noida-sector-45' },  { name: 'Sector 46',  slug: 'noida-sector-46' },
+    { name: 'Sector 47', slug: 'noida-sector-47' },  { name: 'Sector 48',  slug: 'noida-sector-48' },
+    { name: 'Sector 49', slug: 'noida-sector-49' },  { name: 'Sector 50',  slug: 'noida-sector-50' },
+    { name: 'Sector 51', slug: 'noida-sector-51' },  { name: 'Sector 52',  slug: 'noida-sector-52' },
+    { name: 'Sector 53', slug: 'noida-sector-53' },  { name: 'Sector 55',  slug: 'noida-sector-55' },
+    { name: 'Sector 56', slug: 'noida-sector-56' },  { name: 'Sector 61',  slug: 'noida-sector-61' },
+    { name: 'Sector 62', slug: 'noida-sector-62' },  { name: 'Sector 63',  slug: 'noida-sector-63' },
+    { name: 'Sector 70', slug: 'noida-sector-70' },  { name: 'Sector 72',  slug: 'noida-sector-72' },
+    { name: 'Sector 73', slug: 'noida-sector-73' },  { name: 'Sector 74',  slug: 'noida-sector-74' },
+    { name: 'Sector 75', slug: 'noida-sector-75' },  { name: 'Sector 76',  slug: 'noida-sector-76' },
+    { name: 'Sector 77', slug: 'noida-sector-77' },  { name: 'Sector 78',  slug: 'noida-sector-78' },
+    { name: 'Sector 79', slug: 'noida-sector-79' },  { name: 'Sector 80',  slug: 'noida-sector-80' },
+    { name: 'Sector 81', slug: 'noida-sector-81' },  { name: 'Sector 82',  slug: 'noida-sector-82' },
+    { name: 'Sector 86', slug: 'noida-sector-86' },  { name: 'Sector 88',  slug: 'noida-sector-88' },
+    { name: 'Sector 89', slug: 'noida-sector-89' },  { name: 'Sector 90',  slug: 'noida-sector-90' },
+    { name: 'Sector 92', slug: 'noida-sector-92' },  { name: 'Sector 93',  slug: 'noida-sector-93' },
+    { name: 'Sector 94', slug: 'noida-sector-94' },  { name: 'Sector 96',  slug: 'noida-sector-96' },
+    { name: 'Sector 97', slug: 'noida-sector-97' },  { name: 'Sector 98',  slug: 'noida-sector-98' },
+    { name: 'Sector 100',slug: 'noida-sector-100' }, { name: 'Sector 101', slug: 'noida-sector-101' },
+    { name: 'Sector 102',slug: 'noida-sector-102' }, { name: 'Sector 104', slug: 'noida-sector-104' },
+    { name: 'Sector 107',slug: 'noida-sector-107' }, { name: 'Sector 108', slug: 'noida-sector-108' },
+    { name: 'Sector 110',slug: 'noida-sector-110' }, { name: 'Sector 113', slug: 'noida-sector-113' },
+    { name: 'Sector 115',slug: 'noida-sector-115' }, { name: 'Sector 117', slug: 'noida-sector-117' },
+    { name: 'Sector 118',slug: 'noida-sector-118' }, { name: 'Sector 119', slug: 'noida-sector-119' },
+    { name: 'Sector 120',slug: 'noida-sector-120' }, { name: 'Sector 121', slug: 'noida-sector-121' },
+    { name: 'Sector 122',slug: 'noida-sector-122' }, { name: 'Sector 123', slug: 'noida-sector-123' },
+    { name: 'Sector 126',slug: 'noida-sector-126' }, { name: 'Sector 128', slug: 'noida-sector-128' },
+    { name: 'Sector 129',slug: 'noida-sector-129' }, { name: 'Sector 131', slug: 'noida-sector-131' },
+    { name: 'Sector 132',slug: 'noida-sector-132' }, { name: 'Sector 133', slug: 'noida-sector-133' },
+    { name: 'Sector 134',slug: 'noida-sector-134' }, { name: 'Sector 135', slug: 'noida-sector-135' },
+    { name: 'Sector 137',slug: 'noida-sector-137' }, { name: 'Sector 138', slug: 'noida-sector-138' },
+    { name: 'Sector 140',slug: 'noida-sector-140' }, { name: 'Sector 143', slug: 'noida-sector-143' },
+    { name: 'Sector 144',slug: 'noida-sector-144' }, { name: 'Sector 146', slug: 'noida-sector-146' },
+    { name: 'Sector 150',slug: 'noida-sector-150' }, { name: 'Sector 151', slug: 'noida-sector-151' },
+    { name: 'Sector 152',slug: 'noida-sector-152' }, { name: 'Sector 153', slug: 'noida-sector-153' },
+    { name: 'Sector 158',slug: 'noida-sector-158' }, { name: 'Sector 161', slug: 'noida-sector-161' },
+    { name: 'Sector 162',slug: 'noida-sector-162' }, { name: 'Sector 163', slug: 'noida-sector-163' },
+    { name: 'Sector 166',slug: 'noida-sector-166' }, { name: 'Sector 167', slug: 'noida-sector-167' },
+  ],
+  lucknow: [
+    { name: 'Indira Nagar',     slug: 'indira-nagar-lucknow' },  { name: 'Krishna Nagar',   slug: 'krishna-nagar-lucknow' },
+    { name: 'Lucknow Chowk',    slug: 'lucknow-chowk' },         { name: 'Rajendra Nagar',  slug: 'rajendra-nagar-lucknow' },
+    { name: 'Sarojini Nagar',   slug: 'sarojini-nagar-lucknow' },{ name: 'Vikas Nagar',     slug: 'vikas-nagar-lucknow' },
+  ],
+  indore: [
+    { name: 'Airport Road',     slug: 'airport-road-indore' },   { name: 'Chandan Nagar',   slug: 'chandan-nagar-indore' },
+    { name: 'Gandhi Nagar',     slug: 'gandhi-nagar-indore' },   { name: 'Lalbagh',         slug: 'lalbagh-indore' },
+    { name: 'Mahalaxmi Nagar',  slug: 'mahalaxmi-nagar-indore' },{ name: 'MG Road',         slug: 'mg-road-indore' },
+    { name: 'Rajendra Nagar',   slug: 'rajendra-nagar-indore' }, { name: 'Ring Road',       slug: 'ring-road-indore' },
+    { name: 'Saket Nagar',      slug: 'saket-nagar-indore' },    { name: 'Tilak Nagar',     slug: 'tilak-nagar-indore' },
+    { name: 'Vaishali Nagar',   slug: 'vaishali-nagar-indore' }, { name: 'Vijay Nagar',     slug: 'vijay-nagar-indore' },
+  ],
+  bhopal: [
+    { name: 'Bhopal Airport',   slug: 'bhopal-airport' },        { name: 'Bhopal Station',  slug: 'bhopal-station' },
+    { name: 'Chuna Bhatti',     slug: 'chuna-bhatti-bhopal' },   { name: 'Gandhi Nagar',    slug: 'gandhi-nagar-bhopal' },
+    { name: 'Jail Road',        slug: 'jail-road-bhopal' },      { name: 'Saket Nagar',     slug: 'saket-nagar-bhopal' },
+    { name: 'Shivaji Nagar',    slug: 'shivaji-nagar-bhopal' },  { name: 'Vasant Kunj',     slug: 'vasant-kunj-bhopal' },
+    { name: 'Vijay Nagar',      slug: 'vijay-nagar-bhopal' },
+  ],
+  goa: [
+    { name: 'North Goa', slug: 'north-goa' },
+    { name: 'South Goa', slug: 'south-goa' },
+  ],
+  ranchi: [
+    { name: 'Ashok Nagar',      slug: 'ashok-nagar-ranchi' },    { name: 'Gulmohar Colony', slug: 'gulmohar-colony-ranchi' },
+    { name: 'Khel Gaon',        slug: 'khel-gaon-ranchi' },      { name: 'Lalpur',          slug: 'lalpur-ranchi' },
+    { name: 'Main Road',        slug: 'main-road-ranchi' },      { name: 'Patel Nagar',     slug: 'patel-nagar-ranchi' },
+    { name: 'Sadar Bazar',      slug: 'sadar-bazar-ranchi' },    { name: 'Saket Nagar',     slug: 'saket-nagar-ranchi' },
+    { name: 'Saraswati Nagar',  slug: 'saraswati-nagar-ranchi' },{ name: 'Sunder Nagar',    slug: 'sunder-nagar-ranchi' },
+    { name: 'Vikash Nagar',     slug: 'vikash-nagar-ranchi' },   { name: 'College Road',    slug: 'ranchi-college-road' },
+    { name: 'University Road',  slug: 'ranchi-university-road' },
+  ],
+  nashik: [
+    { name: 'Ashok Nagar',   slug: 'ashok-nagar-nashik' },   { name: 'College Road',  slug: 'college-road-nashik' },
+    { name: 'Dwarka',        slug: 'dwarka-nashik' },         { name: 'Ganesh Nagar',  slug: 'ganesh-nagar-nashik' },
+    { name: 'Govind Nagar',  slug: 'govind-nagar-nashik' },  { name: 'Indira Nagar',  slug: 'indira-nagar-nashik' },
+    { name: 'Jail Road',     slug: 'jail-road-nashik' },     { name: 'Nashik Road',   slug: 'nashik-road' },
+    { name: 'Panchavati',    slug: 'panchavati-nashik' },    { name: 'Shalimar',      slug: 'shalimar-nashik' },
+  ],
+  surat: [
+    { name: 'Palanpur',     slug: 'palanpur-surat' },
+    { name: 'Vishal Nagar', slug: 'vishal-nagar-surat' },
+  ],
+  vadodara: [
+    { name: 'Hari Nagar', slug: 'hari-nagar-vadodara' },
+    { name: 'Khanpur',    slug: 'khanpur-vadodara' },
+    { name: 'Mandvi',     slug: 'mandvi-vadodara' },
+  ],
+  kanpur: [
+    { name: 'Ashok Nagar',      slug: 'ashok-nagar-kanpur' },    { name: 'Civil Lines',     slug: 'civil-lines-kanpur' },
+    { name: 'Geeta Nagar',      slug: 'geeta-nagar-kanpur' },    { name: 'Indira Nagar',    slug: 'indira-nagar-kanpur' },
+    { name: 'Kanpur Cantonment',slug: 'kanpur-cantonment' },     { name: 'Kanpur Road',     slug: 'kanpur-road' },
+    { name: 'Saket Nagar',      slug: 'saket-nagar-kanpur' },    { name: 'Shastri Nagar',   slug: 'shastri-nagar-kanpur' },
+    { name: 'Shyam Nagar',      slug: 'shyam-nagar-kanpur' },   { name: 'Tilak Nagar',     slug: 'tilak-nagar-kanpur' },
+    { name: 'Transport Nagar',  slug: 'transport-nagar-kanpur' },{ name: 'Vishnupuri',      slug: 'vishnupuri-kanpur' },
+  ],
+  varanasi: [
+    { name: 'Varanasi Cantt', slug: 'varanasi-cantt' },
+  ],
+  hyderabad: [
+    { name: 'Rajendra Nagar', slug: 'rajendra-nagar-hyderabad' },
+  ],
+};
+
+// Derive parent city for any slug
+function getParentCity(slug: string): string | null {
+  if (cityAreasMap[slug]) return slug; // slug IS the city
+  for (const citySlug of Object.keys(cityAreasMap)) {
+    if (cityAreasMap[citySlug].some((a) => a.slug === slug)) return citySlug;
+  }
+  return null;
+}
+
 export default function LocationPage({ params }: PageProps) {
   const slug = params?.slug;
   if (!slug || !locationSlugs.includes(slug)) notFound();
@@ -109,6 +326,13 @@ export default function LocationPage({ params }: PageProps) {
   const locationImageSrc = existsSync(join(process.cwd(), 'public', locationImagePath))
     ? locationImagePath
     : '/images/escorts/bg-escorts.webp';
+
+  const parentCitySlug = getParentCity(slug);
+  const localAreas = parentCitySlug
+    ? cityAreasMap[parentCitySlug].filter((a) => a.slug !== slug).slice(0, 40)
+    : [];
+  const parentCityName = parentCitySlug ? formatLocationName(parentCitySlug) : loc;
+  const otherMetros = metroLocations.filter((c) => c.slug !== (parentCitySlug ?? slug));
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -454,6 +678,70 @@ export default function LocationPage({ params }: PageProps) {
                 </details>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CITY SUB-AREAS ── */}
+      {localAreas.length > 0 && (
+        <section className="pune-areas-section" aria-labelledby="areas-heading">
+          <div className="container">
+            <div className="section-title text-center">
+              <h2 id="areas-heading" className="title">
+                Popular Areas in <span className="text-highlight">{parentCityName}</span>
+              </h2>
+              <div className="diamond-line" aria-hidden="true"></div>
+              <p className="section-description vso-speakable">
+                Hot Natasha covers every major area in {parentCityName}. Find premium verified escorts near you — available 24/7, in-call and out-call.
+              </p>
+            </div>
+            <div className="areas-cloud" role="list" aria-label={`${parentCityName} areas covered`}>
+              {localAreas.map((area) => (
+                <Link key={area.slug} href={`/location/${area.slug}`} className="area-pill" role="listitem">
+                  <i className="fa fa-map-marker" aria-hidden="true"></i> {area.name}
+                </Link>
+              ))}
+            </div>
+            <div className="text-center" style={{ marginTop: '30px' }}>
+              <Link href="/location" className="btn btn-outline-light">
+                View All Locations &nbsp;<i className="fa fa-map-marker" aria-hidden="true"></i>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── OTHER METRO CITIES ── */}
+      <section className="metro-cities-section" aria-labelledby="metro-heading">
+        <div className="container">
+          <div className="section-title text-center">
+            <span className="metro-section-label">Pan-India Escort Services</span>
+            <h2 id="metro-heading" className="title">
+              Escort Services Across <span className="text-highlight">India&apos;s Top Cities</span>
+            </h2>
+            <div className="diamond-line" aria-hidden="true"></div>
+            <p className="section-description">
+              Hot Natasha operates across 18+ major Indian metros — Mumbai, Delhi, Bangalore, Hyderabad and more.
+              Premium, verified escorts available 24/7 in every city.
+            </p>
+          </div>
+          <div className="metro-grid">
+            {otherMetros.map((city) => (
+              <Link key={city.slug} href={`/location/${city.slug}`} className="metro-card">
+                <div className="metro-card-img">
+                  <Image src={city.image} alt={`Escorts in ${city.name}`} fill sizes="(max-width:768px) 50vw, 20vw" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
+                </div>
+                <div className="metro-card-overlay">
+                  <span className="metro-card-name">{city.name}</span>
+                  <span className="metro-card-cta">Explore <i className="fa fa-arrow-right" aria-hidden="true"></i></span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center" style={{ marginTop: '40px' }}>
+            <Link href="/location" className="btn btn-primary">
+              View All City Locations &nbsp;<i className="fa fa-map-marker" aria-hidden="true"></i>
+            </Link>
           </div>
         </div>
       </section>
