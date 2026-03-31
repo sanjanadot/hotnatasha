@@ -5,7 +5,7 @@ import HeroBanner from '@/components/HeroBanner';
 import CTA from '@/components/CTA';
 import BookingForm from '@/components/BookingForm';
 import Stats from '@/components/Stats';
-import { siteConfig, serviceCategories } from '@/data/site-config';
+import { siteConfig } from '@/data/site-config';
 
 // ── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -232,13 +232,31 @@ const whyChooseFeatures = [
   { icon: 'fa-shield', title: 'Safe & Health-Verified', desc: 'Strict health, safety, and hygiene standards maintained for every client and engagement.' },
 ];
 
-const featuredServices = [
-  { slug: 'russian-escorts', name: 'Russian Escorts', image: '/images/services/russian-escorts.webp' },
-  { slug: 'vip-escorts', name: 'VIP Escorts', image: '/images/services/vip-escorts.webp' },
-  { slug: 'model-escorts', name: 'Model Escorts', image: '/images/services/model-escorts.webp' },
-  { slug: 'college-escorts', name: 'College Escorts', image: '/images/services/college-escorts.webp' },
-  { slug: 'housewife-escorts', name: 'Housewife Escorts', image: '/images/services/housewife-escorts.webp' },
-  { slug: 'independent-escorts', name: 'Independent Escorts', image: '/images/services/independent-escorts.webp' },
+const allServices = [
+  { slug: 'russian-escorts',      name: 'Russian Escorts',       image: '/images/services/russian-escorts.webp' },
+  { slug: 'vip-escorts',          name: 'VIP Escorts',           image: '/images/services/vip-escorts.webp' },
+  { slug: 'model-escorts',        name: 'Model Escorts',         image: '/images/services/model-escorts.webp' },
+  { slug: 'college-escorts',      name: 'College Girl Escorts',  image: '/images/services/college-escorts.webp' },
+  { slug: 'housewife-escorts',    name: 'Housewife Escorts',     image: '/images/services/housewife-escorts.webp' },
+  { slug: 'independent-escorts',  name: 'Independent Escorts',   image: '/images/services/independent-escorts.webp' },
+  { slug: 'air-hostess-escorts',  name: 'Air Hostess Escorts',   image: '/images/services/air-hostess-escorts.webp' },
+  { slug: 'bengali-escorts',      name: 'Bengali Escorts',       image: '/images/services/bengali-escorts.webp' },
+  { slug: 'foreigner-escorts',    name: 'Foreigner Escorts',     image: '/images/services/foreigner-escorts.webp' },
+  { slug: 'gujarati-escorts',     name: 'Gujarati Escorts',      image: '/images/services/gujarati-escorts.webp' },
+  { slug: 'punjabi-escorts',      name: 'Punjabi Escorts',       image: '/images/services/punjabi-escorts.webp' },
+  { slug: 'south-indian-escorts', name: 'South Indian Escorts',  image: '/images/services/south-indian-escorts.webp' },
+  { slug: 'north-indian-escorts', name: 'North Indian Escorts',  image: '/images/services/north-indian-escorts.webp' },
+  { slug: 'marathi-escorts',      name: 'Marathi Escorts',       image: '/images/services/marathi-escorts.webp' },
+  { slug: 'marwadi-escorts',      name: 'Marwadi Escorts',       image: '/images/services/marwadi-escorts.webp' },
+  { slug: 'hot-bhabhi',           name: 'Hot Bhabhi Escorts',    image: '/images/services/bhabhi-escorts.webp' },
+  { slug: 'hi-fi-escorts',        name: 'Hi-Fi Escorts',         image: '/images/services/hi-fi-escorts.webp' },
+  { slug: 'teen-escorts',         name: 'Teen Escorts',          image: '/images/services/teen-escorts.webp' },
+  { slug: 'unsatisfied-escorts',  name: 'Unsatisfied Escorts',   image: '/images/services/unsatisfied-escorts.webp' },
+  { slug: 'muslim-escorts',       name: 'Muslim Escorts',        image: '/images/services/muslim-escorts.webp' },
+  { slug: 'jaat-escorts',         name: 'Jaat Escorts',          image: '/images/services/jaat-escorts.webp' },
+  { slug: 'lesbian-escorts',      name: 'Lesbian Escorts',       image: '/images/services/lesbian-escorts.webp' },
+  { slug: 'shemale-escorts',      name: 'Shemale Escorts',       image: '/images/services/shemale-escorts.webp' },
+  { slug: 'actress-escorts',      name: 'Actress Escorts',       image: '/images/services/celebrity-escorts.webp' },
 ];
 
 const bookingSteps = [
@@ -376,39 +394,39 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FEATURED SERVICES ── */}
+      {/* ── ALL SERVICES — portrait image cards, all 24 categories ── */}
       <section className="featured-services-section" aria-labelledby="featured-services-heading">
         <div className="container">
           <div className="section-title text-center">
             <h2 id="featured-services-heading" className="title">
-              Premium Escorts In <span className="text-highlight">Pune</span>
+              All Escort Services In <span className="text-highlight">Pune</span>
             </h2>
             <div className="diamond-line" aria-hidden="true"></div>
             <p className="section-description vso-speakable">
-              Browse Pune&apos;s most popular escort categories — each featuring personally verified, professional companions
+              Browse all 24 verified escort categories in Pune — each featuring personally verified, professional companions
               offering a discreet and luxurious experience tailored to your preferences.
             </p>
           </div>
-          <div className="featured-services-grid">
-            {featuredServices.map((service) => (
-              <Link key={service.slug} href={`/${service.slug}`} className="featured-service-card" aria-label={`Book ${service.name} in Pune`}>
-                <div className="featured-service-img">
+          <div className="all-services-grid">
+            {allServices.map((service) => (
+              <Link key={service.slug} href={`/${service.slug}`} className="service-portrait-card" aria-label={`Book ${service.name} in Pune`}>
+                <div className="service-portrait-img">
                   <Image
                     src={service.image}
                     alt={`${service.name} in Pune — Hot Natasha`}
                     fill
                     loading="lazy"
-                    style={{ objectFit: 'cover' }}
-                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    sizes="(max-width: 480px) 50vw, (max-width: 768px) 33vw, 25vw"
                   />
-                  <div className="featured-service-overlay" aria-hidden="true">
+                  <div className="service-portrait-overlay" aria-hidden="true">
                     <span className="btn btn-primary">View Profiles</span>
                   </div>
                 </div>
-                <div className="featured-service-info">
-                  <h3>{service.name} in Pune</h3>
-                  <span className="service-link-arrow" aria-hidden="true">
-                    Book Now <i className="fa fa-angle-right"></i>
+                <div className="service-portrait-info">
+                  <h3>{service.name}</h3>
+                  <span className="service-portrait-loc">
+                    <i className="fa fa-map-marker" aria-hidden="true"></i> Pune
                   </span>
                 </div>
               </Link>
@@ -418,38 +436,6 @@ export default function HomePage() {
       </section>
 
       <CTA />
-
-      {/* ── ALL SERVICE CATEGORY TYPES ── */}
-      <section className="service-types-section" aria-labelledby="services-heading">
-        <div className="container">
-          <div className="section-title text-center">
-            <h2 id="services-heading" className="title">
-              All Escort Service Types in <span className="text-highlight">Pune</span>
-            </h2>
-            <div className="diamond-line" aria-hidden="true"></div>
-            <p className="section-description">
-              Hot Natasha offers <strong>24+ verified escort categories</strong> in Pune. Whatever you&apos;re looking for
-              — exotic, local, independent, or VIP — we have the perfect verified companion for you.
-            </p>
-          </div>
-          <div className="service-types-grid">
-            {serviceCategories.flat().map((service) => (
-              <Link key={service.slug} href={`/${service.slug}`} className="service-type-card">
-                <i className="fa fa-diamond" aria-hidden="true"></i>
-                <span>{service.name}</span>
-                <span className="service-type-arrow" aria-hidden="true">
-                  <i className="fa fa-angle-right"></i>
-                </span>
-              </Link>
-            ))}
-          </div>
-          <div className="text-center" style={{ marginTop: '35px' }}>
-            <Link href="/services" className="btn btn-primary">
-              View All Services &nbsp;<i className="fa fa-arrow-right" aria-hidden="true"></i>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* ── HOW TO BOOK — ASO "how to" query + HowTo JSON-LD + VSO ── */}
       <section className="how-it-works-section" aria-labelledby="how-to-heading">

@@ -747,45 +747,48 @@ textarea.form-control {
   background: var(--gray-light);
 }
 
-.featured-services-grid {
+/* Portrait service card grid — all 24 services */
+.all-services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
 }
 
-.featured-service-card {
+.service-portrait-card {
   text-decoration: none;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   background: #fff;
   display: block;
 }
 
-.featured-service-card:hover {
+.service-portrait-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.18);
 }
 
-.featured-service-img {
+/* Portrait / vertical aspect ratio for images */
+.service-portrait-img {
   position: relative;
-  height: 250px;
+  width: 100%;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
 }
 
-.featured-service-img img {
-  transition: transform 0.4s ease;
+.service-portrait-img img {
+  transition: transform 0.45s ease;
 }
 
-.featured-service-card:hover .featured-service-img img {
-  transform: scale(1.06) !important;
+.service-portrait-card:hover .service-portrait-img img {
+  transform: scale(1.07) !important;
 }
 
-.featured-service-overlay {
+.service-portrait-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(215, 0, 0, 0.75);
+  background: rgba(215, 0, 0, 0.72);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -793,33 +796,40 @@ textarea.form-control {
   transition: opacity 0.3s;
 }
 
-.featured-service-card:hover .featured-service-overlay {
+.service-portrait-card:hover .service-portrait-overlay {
   opacity: 1;
 }
 
-.featured-service-info {
-  padding: 16px 20px;
+.service-portrait-info {
+  padding: 13px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
 }
 
-.featured-service-info h3 {
+.service-portrait-info h3 {
   color: var(--secondary-color);
-  font-size: 17px;
+  font-size: 15px;
   margin: 0;
+  line-height: 1.35;
   transition: color 0.3s;
 }
 
-.featured-service-card:hover .featured-service-info h3 {
+.service-portrait-card:hover .service-portrait-info h3 {
   color: var(--primary-color);
 }
 
-.service-link-arrow {
-  font-size: 13px;
-  color: var(--primary-color);
-  font-weight: 600;
+.service-portrait-loc {
+  font-size: 12px;
+  color: #999;
   white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.service-portrait-loc i {
+  color: var(--primary-color);
+  font-size: 11px;
 }
 
 /* All Service Types Grid */
@@ -1190,8 +1200,8 @@ textarea.form-control {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .featured-services-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .all-services-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .features-grid {
@@ -1205,8 +1215,9 @@ textarea.form-control {
     justify-content: flex-start;
   }
 
-  .featured-services-grid {
+  .all-services-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .service-types-grid {
@@ -1242,9 +1253,9 @@ textarea.form-control {
     align-items: flex-start;
   }
 
-  .featured-services-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
+  .all-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .service-types-grid {
