@@ -1121,8 +1121,8 @@ textarea.form-control {
 
 .metro-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
   margin-top: 36px;
 }
 
@@ -1164,7 +1164,7 @@ textarea.form-control {
 
 .metro-card-name {
   color: #fff;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 700;
   display: block;
   line-height: 1.2;
@@ -1173,11 +1173,11 @@ textarea.form-control {
 
 .metro-card-cta {
   color: rgba(255,255,255,0.0);
-  font-size: 10.5px;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.5px;
   display: block;
-  margin-top: 5px;
+  margin-top: 6px;
   transform: translateY(6px);
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -1452,7 +1452,7 @@ textarea.form-control {
 
   .metro-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
   }
 }
 
@@ -1997,8 +1997,8 @@ textarea.form-control {
   }
 
   .metro-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 
   .steps-grid {
@@ -2029,7 +2029,7 @@ textarea.form-control {
   }
 
   .metro-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
 
