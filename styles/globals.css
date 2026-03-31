@@ -1406,14 +1406,57 @@ textarea.form-control {
 
 /* ── Credentials / EEAT Authoritativeness Bar ── */
 .credentials-section {
-  background: var(--primary-color);
-  padding: 32px 0;
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a0505 40%, #0d0d0d 100%);
+  padding: 52px 0 48px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(215, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(215, 0, 0, 0.25);
+}
+
+.cred-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(215, 0, 0, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 85% 50%, rgba(215, 0, 0, 0.10) 0%, transparent 50%),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 119px,
+      rgba(255,255,255,0.025) 120px
+    );
+  pointer-events: none;
+}
+
+.cred-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.cred-intro-line {
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(215,0,0,0.6), transparent);
+}
+
+.cred-intro-text {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: rgba(255,255,255,0.45);
+  white-space: nowrap;
+  margin: 0;
 }
 
 .credentials-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 15px;
+  gap: 0;
   text-align: center;
 }
 
@@ -1421,26 +1464,61 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 7px;
+  gap: 10px;
+  padding: 20px 16px;
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+.credential-item:hover {
+  transform: translateY(-4px);
+}
+
+.credential-item + .credential-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(215,0,0,0.4), transparent);
+}
+
+.cred-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(215,0,0,0.2), rgba(215,0,0,0.05));
+  border: 1px solid rgba(215,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+  box-shadow: 0 0 18px rgba(215,0,0,0.15);
+}
+
+.cred-icon-badge i {
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+.cred-value {
+  font-size: 30px;
+  font-weight: 800;
   color: #fff;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  text-shadow: 0 0 28px rgba(215, 0, 0, 0.55), 0 2px 8px rgba(0,0,0,0.6);
+  display: block;
 }
 
-.credential-item i {
-  font-size: 24px;
-  opacity: 0.9;
-}
-
-.credential-item strong {
-  font-size: 21px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-}
-
-.credential-item span {
-  font-size: 11px;
+.cred-label {
+  font-size: 10.5px;
   text-transform: uppercase;
-  opacity: 0.82;
-  letter-spacing: 0.6px;
+  letter-spacing: 1.2px;
+  color: rgba(255,255,255,0.52);
+  line-height: 1.4;
+  display: block;
 }
 
 /* ── How It Works / Booking Steps ── */
@@ -1730,7 +1808,7 @@ textarea.form-control {
 @media (max-width: 1024px) {
   .credentials-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 0;
   }
 
   .steps-grid {
@@ -1762,7 +1840,11 @@ textarea.form-control {
 
   .credentials-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+    gap: 0;
+  }
+
+  .cred-value {
+    font-size: 26px;
   }
 
   .steps-grid {
@@ -1791,11 +1873,20 @@ textarea.form-control {
 @media (max-width: 480px) {
   .credentials-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 0;
   }
 
-  .credential-item strong {
-    font-size: 18px;
+  .cred-value {
+    font-size: 22px;
+  }
+
+  .cred-icon-badge {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cred-icon-badge i {
+    font-size: 15px;
   }
 
   .steps-grid {

@@ -402,13 +402,21 @@ export default function HomePage() {
 
       {/* ── CREDENTIALS — EEAT Authoritativeness Signals ── */}
       <section className="credentials-section" aria-label="Our credentials and track record">
-        <div className="container">
+        <div className="cred-bg-overlay" aria-hidden="true"></div>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div className="cred-intro">
+            <span className="cred-intro-line" aria-hidden="true"></span>
+            <p className="cred-intro-text">Trusted by thousands across Pune</p>
+            <span className="cred-intro-line" aria-hidden="true"></span>
+          </div>
           <div className="credentials-grid">
             {credentials.map((cred, index) => (
               <div key={index} className="credential-item">
-                <i className={`fa ${cred.icon}`} aria-hidden="true"></i>
-                <strong>{cred.value}</strong>
-                <span>{cred.label}</span>
+                <div className="cred-icon-badge">
+                  <i className={`fa ${cred.icon}`} aria-hidden="true"></i>
+                </div>
+                <strong className="cred-value">{cred.value}</strong>
+                <span className="cred-label">{cred.label}</span>
               </div>
             ))}
           </div>
