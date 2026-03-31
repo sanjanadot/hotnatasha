@@ -699,6 +699,518 @@ textarea.form-control {
   margin-top: 30px;
 }
 
+/* =====================================================
+   HOME PAGE REDESIGN — NEW SECTIONS
+   ===================================================== */
+
+/* Trust Bar */
+.trust-bar {
+  background: #1a1a1a;
+  padding: 12px 0;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.trust-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.trust-item i {
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+.trust-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.trust-item a:hover {
+  color: var(--primary-color);
+}
+
+/* Featured Services Section */
+.featured-services-section {
+  padding: 60px 0;
+  background: var(--gray-light);
+}
+
+.featured-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.featured-service-card {
+  text-decoration: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: #fff;
+  display: block;
+}
+
+.featured-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.featured-service-img {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.featured-service-img img {
+  transition: transform 0.4s ease;
+}
+
+.featured-service-card:hover .featured-service-img img {
+  transform: scale(1.06) !important;
+}
+
+.featured-service-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(215, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.featured-service-card:hover .featured-service-overlay {
+  opacity: 1;
+}
+
+.featured-service-info {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.featured-service-info h3 {
+  color: var(--secondary-color);
+  font-size: 17px;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+.featured-service-card:hover .featured-service-info h3 {
+  color: var(--primary-color);
+}
+
+.service-link-arrow {
+  font-size: 13px;
+  color: var(--primary-color);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* All Service Types Grid */
+.service-types-section {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.service-types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.service-type-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+  background: #fff;
+}
+
+.service-type-card:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(215, 0, 0, 0.25);
+}
+
+.service-type-card > i {
+  color: var(--primary-color);
+  font-size: 11px;
+  flex-shrink: 0;
+  transition: color 0.3s;
+}
+
+.service-type-card:hover > i {
+  color: #fff;
+}
+
+.service-type-card > span:nth-child(2) {
+  flex: 1;
+}
+
+.service-type-arrow {
+  margin-left: auto;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 16px;
+}
+
+.service-type-card:hover .service-type-arrow {
+  opacity: 1;
+}
+
+/* Why Choose Us Section */
+.why-choose-section {
+  padding: 70px 0;
+  background: var(--gray-light);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.feature-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 38px 28px;
+  text-align: center;
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s, box-shadow 0.3s, border-top-color 0.3s;
+  border-top: 4px solid transparent;
+}
+
+.feature-box:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.13);
+  border-top-color: var(--primary-color);
+}
+
+.feature-icon {
+  width: 72px;
+  height: 72px;
+  background: rgba(215, 0, 0, 0.09);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+  transition: background 0.3s;
+}
+
+.feature-box:hover .feature-icon {
+  background: var(--primary-color);
+}
+
+.feature-icon i {
+  font-size: 28px;
+  color: var(--primary-color);
+  transition: color 0.3s;
+}
+
+.feature-box:hover .feature-icon i {
+  color: #fff;
+}
+
+.feature-box h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: var(--secondary-color);
+}
+
+.feature-box p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Pune Areas Section */
+.pune-areas-section {
+  padding: 70px 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+}
+
+.pune-areas-section .title {
+  color: #fff;
+}
+
+.pune-areas-section .diamond-line {
+  background: var(--primary-color);
+}
+
+.pune-areas-section .section-description {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.areas-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.area-pill {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 9px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s;
+  cursor: default;
+}
+
+.area-pill:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.area-pill i {
+  color: var(--primary-color);
+  margin-right: 5px;
+  font-size: 11px;
+  transition: color 0.3s;
+}
+
+.area-pill:hover i {
+  color: #fff;
+}
+
+/* About Content Grid (Home page) */
+.about-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: start;
+}
+
+.about-text-col p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 14px;
+  text-align: justify;
+}
+
+.about-text-col .title {
+  margin-bottom: 5px;
+}
+
+.about-cta-btns {
+  display: flex;
+  gap: 15px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.btn-outline-dark {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.btn-outline-dark:hover {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 70px 0;
+  background: var(--gray-light);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+  border-left: 5px solid var(--primary-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.faq-question {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.faq-question i {
+  font-size: 22px;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.faq-question h3 {
+  font-size: 16px;
+  color: var(--secondary-color);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.faq-answer p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+  padding-left: 36px;
+}
+
+/* Booking Section Feature List */
+.booking-features {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.booking-features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.booking-features li i {
+  color: var(--primary-color);
+  font-size: 14px;
+}
+
+/* =====================================================
+   RESPONSIVE — MOBILE & TABLET
+   ===================================================== */
+
+@media (max-width: 1024px) {
+  .service-types-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .featured-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .trust-items {
+    gap: 18px;
+    justify-content: flex-start;
+  }
+
+  .featured-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .booking-features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta-btns {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-items {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .featured-services-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-types-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .areas-cloud {
+    gap: 8px;
+  }
+
+  .area-pill {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+}
+
 .mission h3,
 .vision h3 {
   font-size: 18px;
