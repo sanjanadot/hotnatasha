@@ -518,8 +518,10 @@ export default function HomePage() {
 
       {/* ── WHY CHOOSE US — VSO: "why is Hot Natasha Pune's best escort service?" ── */}
       <section className="why-choose-section" aria-labelledby="why-choose-heading">
-        <div className="container">
+        <div className="why-choose-bg-pattern" aria-hidden="true"></div>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="section-title text-center">
+            <span className="why-choose-label">Why Choose Us</span>
             <h2 id="why-choose-heading" className="title">
               Why is Hot Natasha Pune&apos;s <span className="text-highlight">Most Trusted</span> Escort Service?
             </h2>
@@ -532,11 +534,16 @@ export default function HomePage() {
           <div className="features-grid">
             {whyChooseFeatures.map((feature, index) => (
               <div key={index} className="feature-box">
-                <div className="feature-icon" aria-hidden="true">
-                  <i className={`fa ${feature.icon}`}></i>
+                <span className="feature-num" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                <div className="feature-icon-wrap">
+                  <div className="feature-icon" aria-hidden="true">
+                    <i className={`fa ${feature.icon}`}></i>
+                  </div>
                 </div>
-                <h3>{feature.title}</h3>
-                <p>{feature.desc}</p>
+                <div className="feature-content">
+                  <h3>{feature.title}</h3>
+                  <p>{feature.desc}</p>
+                </div>
               </div>
             ))}
           </div>
