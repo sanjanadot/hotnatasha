@@ -214,13 +214,77 @@ const faqSchema = {
 
 // ── PAGE DATA ────────────────────────────────────────────────────────────────
 const puneAreas = [
-  'Koregaon Park', 'Hinjewadi', 'Shivajinagar', 'Baner', 'Kothrud',
-  'Viman Nagar', 'Hadapsar', 'Kharadi', 'Wakad', 'Aundh',
-  'Deccan Gymkhana', 'Pimpri-Chinchwad', 'Magarpatta', 'Kalyani Nagar',
-  'Wadgaon Sheri', 'Mundhwa', 'Pashan', 'Bavdhan', 'Katraj',
-  'Kondhwa', 'Camp', 'Swargate', 'Sadashiv Peth', 'Shaniwar Wada',
-  'Laxmi Road', 'Solapur Road', 'Airport Road', 'Wanowrie', 'NIBM Road',
-  'Sus Road', 'Karve Nagar', 'Pune Cantonment', 'Yerwada', 'Wagholi',
+  { name: 'Koregaon Park',    slug: 'koregaon-park' },
+  { name: 'Hinjawadi',        slug: 'hinjawadi' },
+  { name: 'Shivaji Nagar',    slug: 'shivaji-nagar' },
+  { name: 'Baner',            slug: 'baner' },
+  { name: 'Kothrud',          slug: 'kothrud' },
+  { name: 'Viman Nagar',      slug: 'viman-nagar' },
+  { name: 'Hadapsar',         slug: 'hadapsar' },
+  { name: 'Kharadi',          slug: 'kharadi' },
+  { name: 'Wakad',            slug: 'wakad' },
+  { name: 'Aundh',            slug: 'aundh' },
+  { name: 'Deccan',           slug: 'deccan' },
+  { name: 'Chinchwad',        slug: 'chinchwad' },
+  { name: 'Magarpatta',       slug: 'magarpatta' },
+  { name: 'Kalyani Nagar',    slug: 'kalyani-nagar' },
+  { name: 'Wadgaon Sheri',    slug: 'wadgaon-sheri' },
+  { name: 'Pashan',           slug: 'pashan' },
+  { name: 'Katraj',           slug: 'katraj' },
+  { name: 'Kondhwa',          slug: 'kondhwa' },
+  { name: 'Swargate',         slug: 'swargate' },
+  { name: 'Shaniwar Wada',    slug: 'shaniwar-wada' },
+  { name: 'Karve Nagar',      slug: 'karve-nagar' },
+  { name: 'Yerwada',          slug: 'yerwada' },
+  { name: 'Wagholi',          slug: 'wagholi' },
+  { name: 'Akurdi',           slug: 'akurdi' },
+  { name: 'Bhosari',          slug: 'bhosari' },
+  { name: 'Boat Club Road',   slug: 'boat-club-road' },
+  { name: 'Chakan',           slug: 'chakan' },
+  { name: 'Dattawadi',        slug: 'dattawadi' },
+  { name: 'Dehu Road',        slug: 'dehu-road' },
+  { name: 'Dighi',            slug: 'dighi' },
+  { name: 'Ghorpadi',         slug: 'ghorpadi' },
+  { name: 'Khadki',           slug: 'khadki' },
+  { name: 'Lohegaon',         slug: 'lohegaon' },
+  { name: 'Lonawala',         slug: 'lonawala' },
+  { name: 'Malewadi',         slug: 'malewadi' },
+  { name: 'Model Colony',     slug: 'model-colony' },
+  { name: 'Nigdi',            slug: 'nigdi' },
+  { name: 'Phursungi',        slug: 'phursungi' },
+  { name: 'Pimple Gurav',     slug: 'pimple-gurav' },
+  { name: 'Pimple Saudagar',  slug: 'pimple-saudagar' },
+  { name: 'Pune Nagar Road',  slug: 'pune-nagar-road' },
+  { name: 'Ravet',            slug: 'ravet' },
+  { name: 'Shivane',          slug: 'shivane' },
+  { name: 'Shukrawar Peth',   slug: 'shukrawar-peth' },
+  { name: 'Talawade',         slug: 'talawade' },
+  { name: 'Bibwewadi',        slug: 'bibwewadi' },
+  { name: 'Dhole Patil Nagar',slug: 'dhole-patil-nagar' },
+  { name: 'Khandala',         slug: 'khandala' },
+  { name: 'Sunarwadi',        slug: 'sunarwadi' },
+  { name: 'Yewalewadi',       slug: 'yewalewadi' },
+];
+
+const metroLocations = [
+  { name: 'Mumbai',    slug: 'mumbai',    image: '/images/location/escorts-in-mumbai.webp' },
+  { name: 'Delhi',     slug: 'delhi',     image: '/images/location/escorts-in-delhi.webp' },
+  { name: 'Bangalore', slug: 'bangalore', image: '/images/location/escorts-in-bangalore.webp' },
+  { name: 'Hyderabad', slug: 'hyderabad', image: '/images/hyderabad/escorts-in-hyderabad.webp' },
+  { name: 'Ahmedabad', slug: 'ahmedabad', image: '/images/location/escorts-in-ahmedabad.webp' },
+  { name: 'Jaipur',    slug: 'jaipur',    image: '/images/location/escorts-in-jaipur.webp' },
+  { name: 'Lucknow',   slug: 'lucknow',   image: '/images/location/escorts-in-lucknow.webp' },
+  { name: 'Gurgaon',   slug: 'gurgaon',   image: '/images/location/escorts-in-gurgaon.webp' },
+  { name: 'Noida',     slug: 'noida',     image: '/images/location/escorts-in-noida.webp' },
+  { name: 'Indore',    slug: 'indore',    image: '/images/location/escorts-in-indore.webp' },
+  { name: 'Bhopal',    slug: 'bhopal',    image: '/images/location/escorts-in-bhopal.webp' },
+  { name: 'Goa',       slug: 'goa',       image: '/images/location/escorts-in-goa.webp' },
+  { name: 'Ranchi',    slug: 'ranchi',    image: '/images/location/escorts-in-ranchi.webp' },
+  { name: 'Nashik',    slug: 'nashik',    image: '/images/location/escorts-in-nashik.webp' },
+  { name: 'Surat',     slug: 'surat',     image: '/images/location/escorts-in-surat.webp' },
+  { name: 'Vadodara',  slug: 'vadodara',  image: '/images/location/escorts-in-vadodara.webp' },
+  { name: 'Kanpur',    slug: 'kanpur',    image: '/images/location/escorts-in-kanpur.webp' },
+  { name: 'Varanasi',  slug: 'varanasi',  image: '/images/location/escorts-in-varanasi.webp' },
 ];
 
 const whyChooseFeatures = [
@@ -602,14 +666,49 @@ export default function HomePage() {
           </div>
           <div className="areas-cloud" role="list" aria-label="Pune areas covered">
             {puneAreas.map((area) => (
-              <span key={area} className="area-pill" role="listitem">
-                <i className="fa fa-map-marker" aria-hidden="true"></i> {area}
-              </span>
+              <Link key={area.slug} href={`/location/${area.slug}`} className="area-pill" role="listitem">
+                <i className="fa fa-map-marker" aria-hidden="true"></i> {area.name}
+              </Link>
             ))}
           </div>
           <div className="text-center" style={{ marginTop: '30px' }}>
             <Link href="/location" className="btn btn-outline-light">
-              View All Locations &nbsp;<i className="fa fa-map-marker" aria-hidden="true"></i>
+              View All Pune Locations &nbsp;<i className="fa fa-map-marker" aria-hidden="true"></i>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── METRO CITIES — Pan-India location pages ── */}
+      <section className="metro-cities-section" aria-labelledby="metro-heading">
+        <div className="container">
+          <div className="section-title text-center">
+            <span className="metro-section-label">Pan-India Escort Services</span>
+            <h2 id="metro-heading" className="title">
+              Escort Services Across <span className="text-highlight">India&apos;s Top Cities</span>
+            </h2>
+            <div className="diamond-line" aria-hidden="true"></div>
+            <p className="section-description">
+              Hot Natasha operates across 18+ major Indian metros — Mumbai, Delhi, Bangalore, Hyderabad and more.
+              Premium, verified escorts available 24/7 in every city.
+            </p>
+          </div>
+          <div className="metro-grid">
+            {metroLocations.map((city) => (
+              <Link key={city.slug} href={`/location/${city.slug}`} className="metro-card">
+                <div className="metro-card-img">
+                  <Image src={city.image} alt={`Escorts in ${city.name}`} fill sizes="(max-width:768px) 50vw, 20vw" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
+                </div>
+                <div className="metro-card-overlay">
+                  <span className="metro-card-name">{city.name}</span>
+                  <span className="metro-card-cta">Explore <i className="fa fa-arrow-right" aria-hidden="true"></i></span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center" style={{ marginTop: '40px' }}>
+            <Link href="/location" className="btn btn-primary">
+              View All City Locations &nbsp;<i className="fa fa-map-marker" aria-hidden="true"></i>
             </Link>
           </div>
         </div>

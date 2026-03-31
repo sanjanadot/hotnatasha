@@ -1075,12 +1075,16 @@ textarea.form-control {
   font-size: 14px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s;
-  cursor: default;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .area-pill:hover {
   background: var(--primary-color);
   border-color: var(--primary-color);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .area-pill i {
@@ -1092,6 +1096,95 @@ textarea.form-control {
 
 .area-pill:hover i {
   color: #fff;
+}
+
+/* ── Metro Cities Section ── */
+.metro-cities-section {
+  padding: 80px 0;
+  background: #f9f9f9;
+  position: relative;
+}
+
+.metro-section-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--primary-color);
+  border: 1px solid rgba(215,0,0,0.3);
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  background: rgba(215,0,0,0.04);
+}
+
+.metro-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.metro-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 2/3;
+  display: block;
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.metro-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.22);
+}
+
+.metro-card-img {
+  position: absolute;
+  inset: 0;
+}
+
+.metro-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.15) 55%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px 14px;
+  transition: background 0.35s ease;
+}
+
+.metro-card:hover .metro-card-overlay {
+  background: linear-gradient(to top, rgba(180,0,0,0.9) 0%, rgba(100,0,0,0.4) 55%, rgba(0,0,0,0.1) 100%);
+}
+
+.metro-card-name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+}
+
+.metro-card-cta {
+  color: rgba(255,255,255,0.0);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  display: block;
+  margin-top: 5px;
+  transform: translateY(6px);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.metro-card:hover .metro-card-cta {
+  color: rgba(255,255,255,0.9);
+  transform: translateY(0);
 }
 
 /* About Content Grid (Home page) */
@@ -1355,6 +1448,11 @@ textarea.form-control {
   .area-pill {
     font-size: 13px;
     padding: 7px 14px;
+  }
+
+  .metro-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 }
 
@@ -1898,6 +1996,11 @@ textarea.form-control {
     gap: 0;
   }
 
+  .metro-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
   .steps-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
@@ -1923,6 +2026,11 @@ textarea.form-control {
 
   .answer-block-image {
     min-height: 300px;
+  }
+
+  .metro-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
   }
 
   .credentials-grid {
