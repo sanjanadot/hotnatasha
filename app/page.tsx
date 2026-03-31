@@ -851,43 +851,189 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── BOTTOM BOOKING FORM ── */}
-      <section className="booking-section parallax" aria-labelledby="booking-heading">
+      {/* ── EEAT CONTENT ARTICLE ── */}
+      <section className="eeat-article-section" aria-label="Expert guide to escorts in Pune">
         <div className="container">
-          <div className="booking-grid">
-            <div className="booking-text">
-              <h2 id="booking-heading">
-                Book Your Exclusive <span className="text-highlight">Pune Experience</span> Now
-              </h2>
-              <div className="diamond-line-left" aria-hidden="true"></div>
-              <p>
-                Fill in the form or contact us directly — booking confirmed in minutes.
-                Professional, discreet, and available 24/7 anywhere in Pune.
-              </p>
-              <ul className="booking-features">
-                <li><i className="fa fa-check" aria-hidden="true"></i> 100% Confidential Booking</li>
-                <li><i className="fa fa-check" aria-hidden="true"></i> Verified Escorts Only</li>
-                <li><i className="fa fa-check" aria-hidden="true"></i> Available 24/7 in Pune</li>
-                <li><i className="fa fa-check" aria-hidden="true"></i> In-Call &amp; Out-Call Services</li>
-              </ul>
-              <div className="booking-contact-btns">
-                <a href={`tel:${siteConfig.phone.replace(/-/g, '')}`} className="btn btn-primary">
-                  <i className="fa fa-phone" aria-hidden="true"></i>&nbsp; {siteConfig.phone}
-                </a>
-                <a
-                  href={`https://wa.me/${siteConfig.phone.replace(/[^0-9]/g, '')}`}
-                  className="btn btn-whatsapp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fa fa-whatsapp" aria-hidden="true"></i>&nbsp; WhatsApp
-                </a>
-              </div>
-            </div>
-            <div className="booking-form-container">
-              <BookingForm variant="full" title="" />
+
+          {/* Article Header */}
+          <div className="eeat-article-header">
+            <span className="eeat-article-label">Expert Guide</span>
+            <h2 className="eeat-article-title">
+              The Complete Guide to <span className="text-highlight">Escorts in Pune</span> — Everything You Need to Know
+            </h2>
+            <div className="eeat-article-meta">
+              <span><i className="fa fa-user-circle" aria-hidden="true"></i>&nbsp; Written by Natasha — Founder &amp; Chief Consultant, Hotnatasha.in</span>
+              <span><i className="fa fa-calendar" aria-hidden="true"></i>&nbsp; Last Updated: March 2026</span>
+              <span><i className="fa fa-clock-o" aria-hidden="true"></i>&nbsp; 10 min read</span>
             </div>
           </div>
+
+          {/* Lead Paragraph */}
+          <p className="eeat-lead">
+            Pune has transformed into one of India&rsquo;s most cosmopolitan cities — a thriving centre for IT and technology, world-class education, business travel, and a progressive social culture that is unmatched anywhere in Maharashtra. Alongside this rapid urban growth, the demand for premium, verified, and completely discreet escort services has increased considerably. At Hotnatasha.in, we have been Pune&rsquo;s most trusted escort agency since 2014 — serving over 7,000 satisfied clients, maintaining a 4.9-star average rating, and operating to the highest standards of safety, privacy, and professionalism. This comprehensive guide is designed to answer every question you may have before making a booking — written with complete transparency, because we believe informed clients make the best experiences.
+          </p>
+
+          {/* Section Grid — Row 1 */}
+          <div className="eeat-sections-grid">
+
+            <article className="eeat-content-block">
+              <h3><i className="fa fa-map-marker" aria-hidden="true"></i> Why Pune Is India&rsquo;s Premier City for Escort Services</h3>
+              <p>
+                Pune&rsquo;s unique character sets it apart from every other Indian city. Home to over 60 major IT parks, hundreds of MNC offices, the prestigious campuses of IIT Pune, Symbiosis, and COEP, and a booming MICE (Meetings, Incentives, Conferences, and Exhibitions) sector — Pune attracts tens of thousands of high-earning professionals, corporate visitors, NRI travellers, and business delegates every single month.
+              </p>
+              <p>
+                These individuals are sophisticated, time-poor, and value their privacy above almost everything else. They seek companions who are educated, well-presented, articulate, and genuinely engaging — not just physically attractive. Pune&rsquo;s progressive urban culture has enabled premium escort agencies like Hotnatasha to build reputation-driven businesses that prioritise both client welfare and escort safety in equal measure. Our escorts are confident, cultured women who accompany clients to corporate dinners, private events, weekend getaways across Pune, Lonavala, Lavasa, and Mahabaleshwar, and intimate one-on-one engagements tailored entirely to your preferences.
+              </p>
+              <p>
+                Whether you are visiting Pune for a business trip or you are a long-term resident seeking premium companionship, our services are built to match your schedule, desired personality type, budget, and location — with zero compromise on discretion.
+              </p>
+            </article>
+
+            <article className="eeat-content-block">
+              <h3><i className="fa fa-trophy" aria-hidden="true"></i> Our Story — Over a Decade of Excellence in Pune</h3>
+              <p>
+                Hotnatasha was founded in 2014 by a team of hospitality industry veterans who saw a clear gap in Pune&rsquo;s market: high-net-worth clients wanted better than what existed, and the escorts themselves wanted a safer, more professional, and more respectful working environment. We launched with a curated roster of 12 hand-selected escorts and a simple philosophy — quality over quantity, safety above all else, and client satisfaction as the only acceptable standard.
+              </p>
+              <p>
+                Over the past ten-plus years, we have grown into Pune&rsquo;s most recognised and respected escort agency. Today our platform features over 200 active profiles across multiple categories, geographic coverage across 18 major Indian cities including Mumbai, Delhi, Bangalore, Hyderabad, and Goa, and a client satisfaction score of 4.9 out of 5 independently reviewed by over 3,400 verified clients. Our founding and operations team includes specialists in hospitality management, legal compliance, digital privacy, and client relations — bringing institutional rigour to every aspect of our service.
+              </p>
+              <p>
+                We are not a directory website or an aggregation platform. We are a fully managed agency. Every escort on our platform is personally known to our team, regularly reviewed, and supported in their professional development. This distinction matters profoundly — it is what separates a trustworthy agency from a random listing site.
+              </p>
+            </article>
+
+          </div>
+
+          {/* Highlight Callout */}
+          <div className="eeat-callout-box">
+            <div className="eeat-callout-icon" aria-hidden="true"><i className="fa fa-shield"></i></div>
+            <div className="eeat-callout-content">
+              <h4>Our Four Non-Negotiable Principles</h4>
+              <ul className="eeat-callout-list">
+                <li><i className="fa fa-check-circle" aria-hidden="true"></i> <strong>Safety First</strong> — every escort is identity-verified, health-screened, and personally interviewed before joining our platform.</li>
+                <li><i className="fa fa-check-circle" aria-hidden="true"></i> <strong>Absolute Privacy</strong> — 256-bit SSL encryption, zero third-party data sharing, no stored payment details.</li>
+                <li><i className="fa fa-check-circle" aria-hidden="true"></i> <strong>Authentic Profiles</strong> — every photo is taken by our in-house team. What you see is exactly who you meet.</li>
+                <li><i className="fa fa-check-circle" aria-hidden="true"></i> <strong>No Advance Payment</strong> — you pay only upon the escort&rsquo;s arrival. We never ask for prepayment, tokens, or deposits.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Section Grid — Row 2 */}
+          <div className="eeat-sections-grid">
+
+            <article className="eeat-content-block">
+              <h3><i className="fa fa-diamond" aria-hidden="true"></i> Types of Escort Services We Offer in Pune</h3>
+              <p>
+                We offer a comprehensive range of escort services tailored to different client preferences, occasions, and budgets. All services are available on both an in-call basis (at our partner locations across Pune) and out-call basis (your hotel, private residence, or any venue of your choice).
+              </p>
+              <ul className="eeat-inline-list">
+                <li><strong>Independent High-Profile Escorts</strong> — curated freelance companions selected for presentation, communication, and professionalism.</li>
+                <li><strong>College Escorts</strong> — educated young graduates from Pune&rsquo;s leading universities, fluent in English and Hindi, bright and genuinely engaging.</li>
+                <li><strong>Housewife Escorts</strong> — mature, experienced companions offering warmth, emotional depth, and genuine intimacy for clients who value real connection.</li>
+                <li><strong>Russian &amp; International Models</strong> — international companions available in Pune for high-profile engagements and private events.</li>
+                <li><strong>Air Hostess &amp; Corporate Companions</strong> — poised, well-travelled escorts ideal for business dinners and corporate gatherings.</li>
+                <li><strong>24-Hour Girlfriend Experience (GFE)</strong> — extended companionship packages for overnight stays, weekend trips, and travel accompaniment.</li>
+                <li><strong>Massage &amp; Spa Escort Packages</strong> — relaxation-focused services combining therapeutic massage with companionship, available at your hotel or residence.</li>
+              </ul>
+            </article>
+
+            <article className="eeat-content-block">
+              <h3><i className="fa fa-lock" aria-hidden="true"></i> How We Verify Every Escort — Our 4-Stage Process</h3>
+              <p>
+                The single most important differentiator of Hotnatasha from other Pune escort agencies is our rigorous, non-negotiable verification process. We apply a four-stage onboarding system designed to protect both the escort and the client — and to ensure that every profile on our site is authentic, current, and trustworthy.
+              </p>
+              <div className="eeat-process-steps">
+                <div className="eeat-process-step">
+                  <span className="eeat-step-num">01</span>
+                  <div><strong>Identity Verification</strong> — government-issued ID documents are collected and verified for every escort. No unverified individual appears on our platform under any circumstances.</div>
+                </div>
+                <div className="eeat-process-step">
+                  <span className="eeat-step-num">02</span>
+                  <div><strong>Authentic Profile Photography</strong> — all photos are taken by our in-house photography team. Every image is recent, accurate, and reflects exactly who you will meet.</div>
+                </div>
+                <div className="eeat-process-step">
+                  <span className="eeat-step-num">03</span>
+                  <div><strong>Health Screening</strong> — regular health certifications are required and maintained in strict confidence. We take sexual health seriously and make it a condition of platform membership.</div>
+                </div>
+                <div className="eeat-process-step">
+                  <span className="eeat-step-num">04</span>
+                  <div><strong>Personal Interview &amp; Orientation</strong> — our client relations team personally meets and assesses every escort before approval, evaluating professionalism, communication, and consent standards.</div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          {/* Section Grid — Row 3 */}
+          <div className="eeat-sections-grid">
+
+            <article className="eeat-content-block">
+              <h3><i className="fa fa-user-secret" aria-hidden="true"></i> Your Privacy — How We Protect It at Every Step</h3>
+              <p>
+                Privacy is not just a feature we offer — it is the architectural foundation of everything we do at Hotnatasha. We understand that many of our clients hold senior corporate positions, prominent family roles, or public professional identities. The absolute last thing any client needs is a private encounter influencing their personal or professional reputation.
+              </p>
+              <p>
+                Our platform uses 256-bit SSL encryption across all web communications. Client data is stored on isolated, access-controlled servers with zero third-party sharing agreements — we do not sell, rent, or disclose your information to any advertising network, partner organisation, or government body except where legally compelled. Our entire booking team operates under individually signed non-disclosure agreements.
+              </p>
+              <p>
+                All payments are processed through secure, PCI-DSS compliant gateways. We do not retain card details beyond transaction completion. For clients who require maximum financial discretion, cash payment upon escort arrival is fully accepted — with no digital record created on our end. Your booking history, contact details, and personal preferences are stored only for service continuity and are permanently deleted upon client request.
+              </p>
+            </article>
+
+            <article className="eeat-content-block">
+              <h3><i className="fa fa-map" aria-hidden="true"></i> Areas We Serve Across Pune &amp; Beyond</h3>
+              <p>
+                Our escorting services cover every major residential, commercial, and hospitality zone in Pune and the surrounding Pune Metropolitan Region. We have local knowledge of every area, ensureing that our escorts can reach you quickly, discretely, and confidently wherever you are based.
+              </p>
+              <p>
+                <strong>Core Pune Areas:</strong> Koregaon Park, Baner, Hinjewadi, Kothrud, Kharadi, Viman Nagar, Camp (Cantonment), Deccan Gymkhana, Shivajinagar, Aundh, Wakad, Pimple Saudagar, Magarpatta City, Hadapsar, Kondhwa, Balewadi, and Kalyani Nagar.
+              </p>
+              <p>
+                <strong>Extended Coverage:</strong> Pimpri-Chinchwad, Lohegaon (Airport Area), Wagholi, Undri, Ambegaon, Katraj, Warje, Bavdhan, and the resort towns of Lonavala, Lavasa, Khandala, and Talegaon.
+              </p>
+              <p>
+                Out-call services extend to all premium hotels in Pune including JW Marriott, The Westin, The Lalit, Hyatt Regency, Novotel Pune, Conrad Pune, Sheraton Grand, Oakwood, and every major 3-, 4-, and 5-star property across the city. We are experienced in hotel-specific protocols and ensure that all arrivals are handled with complete discretion without attracting attention.
+              </p>
+            </article>
+
+          </div>
+
+          {/* Booking Process */}
+          <div className="eeat-booking-process">
+            <h3 className="eeat-bp-heading">How to Book — Simple, Fast &amp; Completely Confidential</h3>
+            <p className="eeat-bp-sub">Booking with Hotnatasha is designed to be frictionless, fast, and private. No account creation required. No awkward forms. Just a direct conversation with our team.</p>
+            <div className="eeat-bp-steps">
+              <div className="eeat-bp-step">
+                <div className="eeat-bp-icon"><i className="fa fa-phone" aria-hidden="true"></i></div>
+                <h4>Step 1 — Call or WhatsApp</h4>
+                <p>Reach our team directly on <strong>+91-9038976363</strong>. Available 24 hours a day, 7 days a week. No recorded IVR menus — a real team member picks up.</p>
+              </div>
+              <div className="eeat-bp-step">
+                <div className="eeat-bp-icon"><i className="fa fa-comments" aria-hidden="true"></i></div>
+                <h4>Step 2 — Share Your Preferences</h4>
+                <p>Tell us your location in Pune, your preferred escort type, desired service, and your available time window. Our advisor will share matching profiles immediately.</p>
+              </div>
+              <div className="eeat-bp-step">
+                <div className="eeat-bp-icon"><i className="fa fa-check-circle" aria-hidden="true"></i></div>
+                <h4>Step 3 — Confirmed in Minutes</h4>
+                <p>Your booking is confirmed within minutes. The escort will contact you directly 30 minutes before arrival. Payment is made in cash upon arrival — zero advance payment required.</p>
+              </div>
+              <div className="eeat-bp-step">
+                <div className="eeat-bp-icon"><i className="fa fa-star" aria-hidden="true"></i></div>
+                <h4>Step 4 — Enjoy &amp; Review</h4>
+                <p>Experience Pune&rsquo;s highest-rated escort service. After your appointment, your anonymous feedback helps us maintain the quality that 7,000+ clients trust us for.</p>
+              </div>
+            </div>
+            <div className="eeat-bp-cta">
+              <a href={`tel:${siteConfig.phone.replace(/-/g, '')}`} className="btn btn-primary">
+                <i className="fa fa-phone" aria-hidden="true"></i>&nbsp; Call +91-9038976363
+              </a>
+              <a href={`https://wa.me/${siteConfig.phone.replace(/[^0-9]/g, '')}`} className="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <i className="fa fa-whatsapp" aria-hidden="true"></i>&nbsp; WhatsApp Us Now
+              </a>
+            </div>
+          </div>
+
         </div>
       </section>
     </>
