@@ -799,64 +799,52 @@ export default function HomePage() {
         <div className="faq-bg-pattern" aria-hidden="true"></div>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
 
+          <div className="faq-header">
+            <span className="faq-label">FAQ</span>
+            <h2 id="faq-heading" className="faq-heading">
+              Frequently Asked <span className="text-highlight">Questions</span>
+            </h2>
+            <p className="faq-subhead">
+              Everything you need to know about escorts in Pune — answered directly.
+            </p>
+          </div>
+
           <div className="faq-layout">
 
-            {/* ── LEFT: Accordion ── */}
-            <div className="faq-main">
-              <span className="faq-label">FAQ</span>
-              <h2 id="faq-heading" className="faq-heading">
-                Frequently Asked <span className="text-highlight">Questions</span>
-              </h2>
-              <p className="faq-subhead">
-                Everything you need to know about escorts in Pune — answered directly.
-              </p>
-              <div className="faq-accordion" role="list">
-                {faqItems.map((item, index) => (
-                  <details key={index} className="faq-item" role="listitem">
-                    <summary className="faq-question">
-                      <span className="faq-q-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-                      <h3>{item.q}</h3>
-                      <span className="faq-toggle-icon" aria-hidden="true">
-                        <i className="fa fa-plus"></i>
-                      </span>
-                    </summary>
-                    <div className="faq-answer">
-                      <p>{item.a}</p>
-                    </div>
-                  </details>
-                ))}
-              </div>
+            {/* ── LEFT: First 6 ── */}
+            <div className="faq-accordion" role="list">
+              {faqItems.slice(0, 6).map((item, index) => (
+                <details key={index} className="faq-item" role="listitem">
+                  <summary className="faq-question">
+                    <span className="faq-q-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                    <h3>{item.q}</h3>
+                    <span className="faq-toggle-icon" aria-hidden="true">
+                      <i className="fa fa-plus"></i>
+                    </span>
+                  </summary>
+                  <div className="faq-answer">
+                    <p>{item.a}</p>
+                  </div>
+                </details>
+              ))}
             </div>
 
-            {/* ── RIGHT: Sticky CTA Panel ── */}
-            <div className="faq-sidebar">
-              <div className="faq-sidebar-card">
-                <div className="faq-sidebar-icon" aria-hidden="true">
-                  <i className="fa fa-question-circle"></i>
-                </div>
-                <h3>Still Have Questions?</h3>
-                <p>Our team is available 24/7. Call or WhatsApp us right now for instant answers.</p>
-                <a href={`tel:${siteConfig.phone}`} className="faq-cta-btn faq-cta-call">
-                  <i className="fa fa-phone" aria-hidden="true"></i> Call Now
-                </a>
-                <a href={`https://wa.me/${siteConfig.phone.replace(/[^0-9]/g,'')}`} className="faq-cta-btn faq-cta-wa" target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp
-                </a>
-                <div className="faq-sidebar-stats">
-                  <div className="faq-ss-item">
-                    <strong>7,000+</strong>
-                    <span>Happy Clients</span>
+            {/* ── RIGHT: Last 6 ── */}
+            <div className="faq-accordion" role="list">
+              {faqItems.slice(6, 12).map((item, index) => (
+                <details key={index + 6} className="faq-item" role="listitem">
+                  <summary className="faq-question">
+                    <span className="faq-q-number" aria-hidden="true">{String(index + 7).padStart(2, '0')}</span>
+                    <h3>{item.q}</h3>
+                    <span className="faq-toggle-icon" aria-hidden="true">
+                      <i className="fa fa-plus"></i>
+                    </span>
+                  </summary>
+                  <div className="faq-answer">
+                    <p>{item.a}</p>
                   </div>
-                  <div className="faq-ss-item">
-                    <strong>4.9★</strong>
-                    <span>Avg Rating</span>
-                  </div>
-                  <div className="faq-ss-item">
-                    <strong>24/7</strong>
-                    <span>Available</span>
-                  </div>
-                </div>
-              </div>
+                </details>
+              ))}
             </div>
 
           </div>

@@ -1480,15 +1480,21 @@ textarea.form-control {
   pointer-events: none;
 }
 
-/* ── Two-column layout ── */
+/* ── Header above grid ── */
+.faq-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* ── Two-column FAQ grid (6 + 6) ── */
 .faq-layout {
   display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 60px;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
   align-items: start;
 }
 
-/* ── Left: heading + accordion ── */
+/* ── Label / heading ── */
 .faq-label {
   display: inline-block;
   font-size: 11px;
@@ -2407,30 +2413,7 @@ textarea.form-control {
 
   .faq-layout {
     grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .faq-sidebar {
-    position: static;
-  }
-
-  .faq-sidebar-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    text-align: left;
-    align-items: center;
-  }
-
-  .faq-sidebar-icon, .faq-sidebar-card h3, .faq-sidebar-card p {
-    display: none;
-  }
-
-  .faq-sidebar-stats {
-    padding-top: 0;
-    border-top: none;
-    border-left: 1px solid rgba(255,255,255,0.08);
-    padding-left: 24px;
+    gap: 16px;
   }
 
   .steps-grid {
@@ -2522,11 +2505,7 @@ textarea.form-control {
 
   .faq-layout {
     grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .faq-sidebar {
-    position: static;
+    gap: 12px;
   }
 
   .faq-question {
