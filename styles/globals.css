@@ -1406,25 +1406,25 @@ textarea.form-control {
 
 /* ── Credentials / EEAT Authoritativeness Bar ── */
 .credentials-section {
-  background: linear-gradient(135deg, #0d0d0d 0%, #1a0505 40%, #0d0d0d 100%);
+  background: linear-gradient(135deg, #1c1c1c 0%, #2e0808 40%, #1c1c1c 100%);
   padding: 52px 0 48px;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(215, 0, 0, 0.25);
-  border-bottom: 1px solid rgba(215, 0, 0, 0.25);
+  border-top: 2px solid rgba(215, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(215, 0, 0, 0.4);
 }
 
 .cred-bg-overlay {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 15% 50%, rgba(215, 0, 0, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 85% 50%, rgba(215, 0, 0, 0.10) 0%, transparent 50%),
+    radial-gradient(circle at 15% 50%, rgba(215, 0, 0, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 85% 50%, rgba(215, 0, 0, 0.15) 0%, transparent 55%),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 119px,
-      rgba(255,255,255,0.025) 120px
+      rgba(255,255,255,0.04) 120px
     );
   pointer-events: none;
 }
@@ -1448,7 +1448,7 @@ textarea.form-control {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.6);
   white-space: nowrap;
   margin: 0;
 }
@@ -1481,20 +1481,20 @@ textarea.form-control {
   top: 15%;
   height: 70%;
   width: 1px;
-  background: linear-gradient(180deg, transparent, rgba(215,0,0,0.4), transparent);
+  background: linear-gradient(180deg, transparent, rgba(215,0,0,0.6), transparent);
 }
 
 .cred-icon-badge {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(215,0,0,0.2), rgba(215,0,0,0.05));
-  border: 1px solid rgba(215,0,0,0.35);
+  background: linear-gradient(135deg, rgba(215,0,0,0.35), rgba(215,0,0,0.12));
+  border: 1px solid rgba(215,0,0,0.55);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 2px;
-  box-shadow: 0 0 18px rgba(215,0,0,0.15);
+  box-shadow: 0 0 22px rgba(215,0,0,0.25);
 }
 
 .cred-icon-badge i {
@@ -1516,7 +1516,7 @@ textarea.form-control {
   font-size: 10.5px;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: rgba(255,255,255,0.52);
+  color: rgba(255,255,255,0.7);
   line-height: 1.4;
   display: block;
 }
