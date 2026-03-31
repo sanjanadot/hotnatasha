@@ -354,10 +354,10 @@ export default function HomePage() {
       <section className="answer-block-section" aria-labelledby="answer-heading">
         <div className="container">
           <div className="answer-block">
-            <div className="answer-block-icon" aria-hidden="true">
-              <i className="fa fa-info-circle"></i>
-            </div>
             <div className="answer-block-content vso-speakable">
+              <div className="answer-block-label">
+                <i className="fa fa-info-circle" aria-hidden="true"></i> About Escorts in Pune
+              </div>
               <h2 id="answer-heading">What Are Escorts in Pune?</h2>
               <p>
                 <strong>Escorts in Pune</strong> are premium professional companions who provide discreet, high-quality
@@ -373,6 +373,27 @@ export default function HomePage() {
                 <span className="answer-tag"><i className="fa fa-check" aria-hidden="true"></i> Fully Confidential</span>
                 <span className="answer-tag"><i className="fa fa-check" aria-hidden="true"></i> All Pune Areas Covered</span>
                 <span className="answer-tag"><i className="fa fa-check" aria-hidden="true"></i> In-Call &amp; Out-Call</span>
+              </div>
+              <div className="answer-block-cta">
+                <a href={`tel:${siteConfig.phone.replace(/-/g, '')}`} className="btn btn-primary">
+                  <i className="fa fa-phone" aria-hidden="true"></i>&nbsp; Call Now
+                </a>
+                <Link href="/booknow" className="btn btn-outline-dark">
+                  Book Now &nbsp;<i className="fa fa-calendar" aria-hidden="true"></i>
+                </Link>
+              </div>
+            </div>
+            <div className="answer-block-image">
+              <Image
+                src="/images/escorts/escorts-in-pune.webp"
+                alt="Premium Escorts in Pune — Hot Natasha"
+                fill
+                loading="lazy"
+                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                sizes="(max-width: 768px) 100vw, 45vw"
+              />
+              <div className="answer-image-badge">
+                <i className="fa fa-star" aria-hidden="true"></i> 4.9/5 &nbsp;&bull;&nbsp; 7,000+ Clients
               </div>
             </div>
           </div>

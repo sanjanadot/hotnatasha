@@ -1288,52 +1288,66 @@ textarea.form-control {
 
 /* ── Answer Block — ASO Zero Position Featured Snippet ── */
 .answer-block-section {
-  padding: 50px 0;
-  background: linear-gradient(135deg, #fff8f8 0%, #fff 100%);
-  border-bottom: 1px solid #f5e0e0;
+  padding: 70px 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
 }
 
 .answer-block {
-  display: flex;
-  gap: 28px;
-  align-items: flex-start;
-  background: #fff;
-  border: 2px solid rgba(215, 0, 0, 0.25);
-  border-left: 6px solid var(--primary-color);
-  border-radius: 14px;
-  padding: 36px 42px;
-  box-shadow: 0 6px 30px rgba(215, 0, 0, 0.07);
-  max-width: 950px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  min-height: 420px;
 }
 
-.answer-block-icon {
-  font-size: 44px;
+.answer-block-content {
+  background: #fff;
+  padding: 48px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.answer-block-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(215, 0, 0, 0.08);
   color: var(--primary-color);
-  flex-shrink: 0;
-  opacity: 0.85;
-  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(215, 0, 0, 0.18);
+  margin-bottom: 18px;
+  width: fit-content;
 }
 
 .answer-block-content h2 {
-  font-size: 24px;
+  font-size: 28px;
   color: var(--secondary-color);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   text-transform: none;
   letter-spacing: 0;
+  line-height: 1.3;
 }
 
 .answer-block-content p {
   font-size: 16px;
   line-height: 1.85;
-  color: #444;
-  margin-bottom: 20px;
+  color: #555;
+  margin-bottom: 22px;
 }
 
 .answer-tags {
   display: flex;
-  gap: 10px;
+  gap: 9px;
   flex-wrap: wrap;
+  margin-bottom: 28px;
 }
 
 .answer-tag {
@@ -1348,6 +1362,46 @@ textarea.form-control {
 
 .answer-tag i {
   margin-right: 5px;
+}
+
+.answer-block-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.answer-block-image {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.answer-block-image img {
+  transition: transform 0.5s ease;
+}
+
+.answer-block:hover .answer-block-image img {
+  transform: scale(1.04) !important;
+}
+
+.answer-image-badge {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(215, 0, 0, 0.88);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 25px;
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+}
+
+.answer-image-badge i {
+  color: #ffd700;
+  margin-right: 4px;
 }
 
 /* ── Credentials / EEAT Authoritativeness Bar ── */
@@ -1695,13 +1749,15 @@ textarea.form-control {
 
 @media (max-width: 768px) {
   .answer-block {
-    flex-direction: column;
-    gap: 18px;
-    padding: 24px 22px;
+    grid-template-columns: 1fr;
   }
 
-  .answer-block-icon {
-    font-size: 34px;
+  .answer-block-content {
+    padding: 32px 28px;
+  }
+
+  .answer-block-image {
+    min-height: 300px;
   }
 
   .credentials-grid {
@@ -1755,12 +1811,16 @@ textarea.form-control {
     padding-left: 16px;
   }
 
-  .answer-block {
-    padding: 22px 18px;
+  .answer-block-content {
+    padding: 24px 20px;
   }
 
   .answer-block-content h2 {
-    font-size: 19px;
+    font-size: 20px;
+  }
+
+  .answer-block-image {
+    min-height: 260px;
   }
 }
 
