@@ -293,9 +293,9 @@ const testimonials = [
 const credentials = [
   { icon: 'fa-users', value: '7,000+', label: 'Satisfied Clients' },
   { icon: 'fa-star', value: '4.9 / 5', label: 'Average Rating' },
-  { icon: 'fa-calendar', value: '10+ Yrs', label: 'Serving Pune' },
-  { icon: 'fa-female', value: '27+', label: 'Elite Escorts' },
-  { icon: 'fa-check', value: '100%', label: 'Verified Profiles' },
+  { icon: 'fa-trophy', value: '10+ Yrs', label: 'Serving Pune' },
+  { icon: 'fa-diamond', value: '27+', label: 'Elite Escorts' },
+  { icon: 'fa-shield', value: '100%', label: 'Verified Profiles' },
   { icon: 'fa-lock', value: '100%', label: 'Confidential' },
 ];
 

@@ -78,6 +78,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://static.getbutton.io" />
+        {/* Font Awesome 4.7 — icons used site-wide */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}
