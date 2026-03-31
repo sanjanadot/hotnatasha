@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import { existsSync } from 'fs';
+import { join } from 'path';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -90,6 +92,11 @@ export default function LocationPage({ params }: PageProps) {
   if (!slug || !locationSlugs.includes(slug)) notFound();
 
   const loc = formatLocationName(slug);
+
+  const locationImagePath = `/images/escorts/escorts-in-${slug}.webp`;
+  const locationImageSrc = existsSync(join(process.cwd(), 'public', locationImagePath))
+    ? locationImagePath
+    : '/images/escorts/bg-escorts.webp';
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -209,7 +216,7 @@ export default function LocationPage({ params }: PageProps) {
             </div>
             <div className="answer-block-image">
               <Image
-                src="/images/escorts/escorts-in-pune.webp"
+                src={locationImageSrc}
                 alt={`Premium Escorts in ${loc} — Hot Natasha`}
                 fill loading="lazy"
                 style={{ objectFit: 'cover', objectPosition: 'center top' }}
@@ -331,11 +338,15 @@ export default function LocationPage({ params }: PageProps) {
             </h2>
             <div className="diamond-line" aria-hidden="true"></div>
           </div>
-          <div className="features-grid-why">
+          <div className="features-grid">
             {whyChooseFeatures.map((feature, index) => (
               <div key={index} className="feature-box">
-                <div className="feature-num" aria-hidden="true">{String(index + 1).padStart(2, '0')}</div>
-                <div className="feature-icon" aria-hidden="true"><i className={`fa ${feature.icon}`}></i></div>
+                <span className="feature-num" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                <div className="feature-icon-wrap">
+                  <div className="feature-icon" aria-hidden="true">
+                    <i className={`fa ${feature.icon}`}></i>
+                  </div>
+                </div>
                 <div className="feature-content">
                   <h3>{feature.title}</h3>
                   <p>{feature.desc}</p>
