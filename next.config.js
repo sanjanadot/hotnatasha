@@ -21,21 +21,7 @@ const nextConfig = {
       },
     ];
   },
-  // Redirect .php URLs to clean URLs
-  async redirects() {
-    return [
-      {
-        source: '/index.php',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/:path*.php',
-        destination: '/:path*',
-        permanent: true,
-      },
-    ];
-  },
+  // PHP redirects are handled by middleware.ts (see middleware.ts)
 };
 
 module.exports = nextConfig;
