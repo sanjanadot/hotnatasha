@@ -622,7 +622,7 @@ export default function LocationPage({ params }: PageProps) {
 
   const parentCitySlug = getParentCity(slug);
   const localAreas = parentCitySlug
-    ? cityAreasMap[parentCitySlug].filter((a) => a.slug !== slug).slice(0, 40)
+    ? cityAreasMap[parentCitySlug].filter((a) => a.slug !== slug)
     : [];
   const parentCityName = parentCitySlug ? formatLocationName(parentCitySlug) : loc;
   const otherMetros = metroLocations.filter((c) => c.slug !== (parentCitySlug ?? slug));
