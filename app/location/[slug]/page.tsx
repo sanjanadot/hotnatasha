@@ -73,18 +73,30 @@ const whyChooseFeatures = [
 ];
 
 const allServices = [
-  { slug: 'independent-escorts',  name: 'Independent Escorts',  image: '/images/services/independent-escorts.webp' },
+  { slug: 'russian-escorts',      name: 'Russian Escorts',       image: '/images/services/russian-escorts.webp' },
   { slug: 'vip-escorts',          name: 'VIP Escorts',           image: '/images/services/vip-escorts.webp' },
   { slug: 'model-escorts',        name: 'Model Escorts',         image: '/images/services/model-escorts.webp' },
-  { slug: 'russian-escorts',      name: 'Russian Escorts',       image: '/images/services/russian-escorts.webp' },
-  { slug: 'college-escorts',      name: 'College Escorts',       image: '/images/services/college-escorts.webp' },
+  { slug: 'college-escorts',      name: 'College Girl Escorts',  image: '/images/services/college-escorts.webp' },
   { slug: 'housewife-escorts',    name: 'Housewife Escorts',     image: '/images/services/housewife-escorts.webp' },
+  { slug: 'independent-escorts',  name: 'Independent Escorts',   image: '/images/services/independent-escorts.webp' },
   { slug: 'air-hostess-escorts',  name: 'Air Hostess Escorts',   image: '/images/services/air-hostess-escorts.webp' },
-  { slug: 'hi-fi-escorts',        name: 'Hi-Fi Escorts',         image: '/images/services/hi-fi-escorts.webp' },
-  { slug: 'celebrity-escorts',    name: 'Celebrity Escorts',     image: '/images/services/celebrity-escorts.webp' },
-  { slug: 'north-indian-escorts', name: 'North Indian Escorts',  image: '/images/services/north-indian-escorts.webp' },
-  { slug: 'punjabi-escorts',      name: 'Punjabi Escorts',       image: '/images/services/punjabi-escorts.webp' },
   { slug: 'bengali-escorts',      name: 'Bengali Escorts',       image: '/images/services/bengali-escorts.webp' },
+  { slug: 'foreigner-escorts',    name: 'Foreigner Escorts',     image: '/images/services/foreigner-escorts.webp' },
+  { slug: 'gujarati-escorts',     name: 'Gujarati Escorts',      image: '/images/services/gujarati-escorts.webp' },
+  { slug: 'punjabi-escorts',      name: 'Punjabi Escorts',       image: '/images/services/punjabi-escorts.webp' },
+  { slug: 'south-indian-escorts', name: 'South Indian Escorts',  image: '/images/services/south-indian-escorts.webp' },
+  { slug: 'north-indian-escorts', name: 'North Indian Escorts',  image: '/images/services/north-indian-escorts.webp' },
+  { slug: 'marathi-escorts',      name: 'Marathi Escorts',       image: '/images/services/marathi-escorts.webp' },
+  { slug: 'marwadi-escorts',      name: 'Marwadi Escorts',       image: '/images/services/marwadi-escorts.webp' },
+  { slug: 'hot-bhabhi',           name: 'Hot Bhabhi Escorts',    image: '/images/services/bhabhi-escorts.webp' },
+  { slug: 'hi-fi-escorts',        name: 'Hi-Fi Escorts',         image: '/images/services/hi-fi-escorts.webp' },
+  { slug: 'teen-escorts',         name: 'Teen Escorts',          image: '/images/services/teen-escorts.webp' },
+  { slug: 'unsatisfied-escorts',  name: 'Unsatisfied Escorts',   image: '/images/services/unsatisfied-escorts.webp' },
+  { slug: 'muslim-escorts',       name: 'Muslim Escorts',        image: '/images/services/muslim-escorts.webp' },
+  { slug: 'jaat-escorts',         name: 'Jaat Escorts',          image: '/images/services/jaat-escorts.webp' },
+  { slug: 'lesbian-escorts',      name: 'Lesbian Escorts',       image: '/images/services/lesbian-escorts.webp' },
+  { slug: 'shemale-escorts',      name: 'Shemale Escorts',       image: '/images/services/shemale-escorts.webp' },
+  { slug: 'actress-escorts',      name: 'Actress Escorts',       image: '/images/services/celebrity-escorts.webp' },
 ];
 
 export default function LocationPage({ params }: PageProps) {
@@ -256,11 +268,11 @@ export default function LocationPage({ params }: PageProps) {
         <div className="container">
           <div className="section-title text-center">
             <h2 id="services-heading" className="title">
-              Escort Services In <span className="text-highlight">{loc}</span>
+              All Escort Services In <span className="text-highlight">{loc}</span>
             </h2>
             <div className="diamond-line" aria-hidden="true"></div>
             <p className="section-description vso-speakable">
-              Browse our verified escort categories available in {loc} — personally verified, professional companions
+              Browse all 24 verified escort categories in {loc} — personally verified, professional companions
               offering a discreet and luxurious experience tailored to your preferences.
             </p>
           </div>
