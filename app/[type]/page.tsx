@@ -31,22 +31,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${escortType.name} in Pune | Premium Escorts Services`,
-    description: `Discover premium ${escortType.name} in Pune with Hot Natasha. ${escortType.description} Book now for memorable experiences.`,
+    title: `${escortType.name} in Pune | Premium Escorts Services | Hot Natasha`,
+    description: `Discover premium ${escortType.name} in Pune with Hot Natasha. ${escortType.description} Book now for memorable experiences. Call +91-9038976363`,
+    authors: [{ name: 'Hot Natasha', url: siteConfig.url }],
     alternates: {
       canonical: `${siteConfig.url}/${params.type}`,
     },
     openGraph: {
       title: `${escortType.name} in Pune | Hot Natasha`,
       description: `Experience the finest ${escortType.name} in Pune. ${escortType.description}`,
+      url: `${siteConfig.url}/${params.type}`,
+      siteName: 'Hot Natasha',
+      locale: 'en_IN',
+      type: 'website',
       images: [
         {
-          url: `${siteConfig.url}/images/${params.type.replace('-escorts', '')}-escorts.webp`,
+          url: `${siteConfig.url}/images/services/${params.type}.webp`,
           width: 1000,
           height: 600,
-          alt: `${escortType.name} in Pune`,
+          alt: `${escortType.name} in Pune - Hot Natasha`,
         },
       ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${escortType.name} in Pune | Hot Natasha`,
+      description: `Premium ${escortType.name} in Pune — 24/7 available. Call +91-9038976363`,
+      images: [`${siteConfig.url}/images/services/${params.type}.webp`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-snippet': -1,
+        'max-image-preview': 'large',
+        'max-video-preview': -1,
+      },
     },
   };
 }

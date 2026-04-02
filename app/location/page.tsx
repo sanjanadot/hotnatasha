@@ -4,10 +4,38 @@ import { siteConfig, majorCities } from '@/data/site-config';
 import CTA from '@/components/CTA';
 
 export const metadata: Metadata = {
-  title: 'Locations',
-  description: 'Find premium escort services in your city. Hot Natasha offers escort services across major cities in India.',
+  title: 'Escorts Service Locations Across India | Hot Natasha',
+  description: 'Hot Natasha provides premium escorts in 20+ Indian cities — Pune, Mumbai, Delhi, Bangalore, Hyderabad, Goa, Jaipur & more. Call +91-9038976363 for instant booking.',
+  authors: [{ name: 'Hot Natasha', url: siteConfig.url }],
   alternates: {
     canonical: `${siteConfig.url}/location`,
+  },
+  openGraph: {
+    title: 'Escorts Service Locations Across India | Hot Natasha',
+    description: 'Premium escorts available in 20+ major Indian cities. Verified, confidential, 24/7. Book now.',
+    url: `${siteConfig.url}/location`,
+    siteName: 'Hot Natasha',
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: `${siteConfig.url}/images/location/escorts-in-pune.webp`,
+        width: 1000,
+        height: 600,
+        alt: 'Escorts Service Locations Across India — Hot Natasha',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Escort Service Locations | Hot Natasha',
+    description: 'Premium escorts in 20+ Indian cities. 24/7 available. Call +91-9038976363.',
+    images: [`${siteConfig.url}/images/location/escorts-in-pune.webp`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 },
   },
 };
 
@@ -54,7 +82,7 @@ export default function LocationPage() {
             {majorCities.map((city) => (
               <Link
                 key={city}
-                href={`/escorts-in-${city}`}
+                href={`/location/${city}`}
                 className="location-card"
               >
                 <div className="location-icon">

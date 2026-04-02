@@ -4,6 +4,14 @@ import { siteConfig } from '@/data/site-config';
 
 const BASE = siteConfig.url;
 
+// Metro cities — higher priority and dedicated images in /image-sitemap.xml
+const metroSlugs = new Set([
+  'pune', 'mumbai', 'delhi', 'bangalore', 'ahmedabad', 'goa',
+  'jaipur', 'lucknow', 'kanpur', 'noida', 'gurgaon', 'surat',
+  'vadodara', 'nashik', 'indore', 'bhopal', 'ranchi', 'varanasi',
+  'hyderabad', 'rajkot',
+]);
+
 const escortTypeSlugs = [
   'actress-escorts',
   'air-hostess-escorts',
@@ -63,8 +71,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}/location/${slug}`,
     lastModified: now,
     changeFrequency: 'weekly' as const,
-    priority: 0.8,
+    priority: metroSlugs.has(slug) ? 0.85 : 0.75,
   }));
 
   return [...staticPages, ...typePages, ...locationPages];
 }
+

@@ -33,7 +33,7 @@ export default function Header() {
             <Link href="/" className="logo">
               <Image
                 src="/images/logo-2.webp"
-                alt="Escorts Service In Pune"
+                alt="Hot Natasha — Premium Escort Service in Pune"
                 width={200}
                 height={67}
                 priority

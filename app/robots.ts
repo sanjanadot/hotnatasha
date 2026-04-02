@@ -10,7 +10,10 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/thankyou'],
       },
     ],
-    sitemap: `${siteConfig.url}/sitemap.xml`,
+    sitemap: [
+      `${siteConfig.url}/sitemap.xml`,
+      `${siteConfig.url}/image-sitemap.xml`,
+    ],
     host: siteConfig.url,
   };
 }

@@ -4,10 +4,38 @@ import BookingForm from '@/components/BookingForm';
 import { siteConfig } from '@/data/site-config';
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Get in touch with Hot Natasha for premium escort services in Pune. Contact us via phone, email, or our booking form.',
+  title: 'Contact Us | Book Escorts in Pune | Hot Natasha',
+  description: 'Contact Hot Natasha to book premium escorts in Pune. Call or WhatsApp +91-9038976363 anytime 24/7. Fast response, 100% discreet, no advance payment required.',
+  authors: [{ name: 'Hot Natasha', url: siteConfig.url }],
   alternates: {
     canonical: `${siteConfig.url}/contact`,
+  },
+  openGraph: {
+    title: 'Contact Hot Natasha | Book Escorts in Pune 24/7',
+    description: 'Reach Hot Natasha anytime — call or WhatsApp +91-9038976363. Fast booking confirmed in minutes. 100% confidential.',
+    url: `${siteConfig.url}/contact`,
+    siteName: 'Hot Natasha',
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: `${siteConfig.url}/images/banner/escorts-in-pune.webp`,
+        width: 1240,
+        height: 600,
+        alt: 'Contact Hot Natasha — Escorts in Pune',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Hot Natasha | Escorts in Pune',
+    description: 'Call or WhatsApp +91-9038976363. Book premium escorts in Pune anytime 24/7.',
+    images: [`${siteConfig.url}/images/banner/escorts-in-pune.webp`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 },
   },
 };
 

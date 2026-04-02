@@ -4,10 +4,38 @@ import BookingForm from '@/components/BookingForm';
 import { siteConfig } from '@/data/site-config';
 
 export const metadata: Metadata = {
-  title: 'Book Now',
-  description: 'Book your premium escort experience with Hot Natasha in Pune. Simple, secure, and confidential booking process.',
+  title: 'Book Now | Reserve Your Escort in Pune | Hot Natasha',
+  description: 'Book a premium escort in Pune with Hot Natasha. Simple 4-step process — call or WhatsApp +91-9038976363. Confirmed in minutes. No advance payment. 100% confidential.',
+  authors: [{ name: 'Hot Natasha', url: siteConfig.url }],
   alternates: {
     canonical: `${siteConfig.url}/booknow`,
+  },
+  openGraph: {
+    title: 'Book Now | Reserve Your Escort in Pune | Hot Natasha',
+    description: 'Book a premium verified escort in Pune in minutes. No advance payment. 100% discreet. Call +91-9038976363.',
+    url: `${siteConfig.url}/booknow`,
+    siteName: 'Hot Natasha',
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: `${siteConfig.url}/images/banner/escorts-in-pune.webp`,
+        width: 1240,
+        height: 600,
+        alt: 'Book Escorts in Pune — Hot Natasha',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Book Escorts in Pune | Hot Natasha',
+    description: 'Reserve your premium escort in Pune. Confirmed in minutes. No advance payment required.',
+    images: [`${siteConfig.url}/images/banner/escorts-in-pune.webp`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 },
   },
 };
 

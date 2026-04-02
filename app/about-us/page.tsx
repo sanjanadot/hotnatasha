@@ -3,10 +3,38 @@ import Link from 'next/link';
 import { siteConfig } from '@/data/site-config';
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Learn about Hot Natasha, your premier destination for premium escorts in Pune. Professional, discreet, and luxurious companionship services.',
+  title: 'About Hot Natasha | Premium Escort Service in Pune Since 2014',
+  description: 'Learn about Hot Natasha — Pune\'s most trusted premium escort service since 2014. 7,000+ satisfied clients, 200+ verified escorts, 100% confidential. Serving all Pune areas 24/7.',
+  authors: [{ name: 'Hot Natasha', url: siteConfig.url }],
   alternates: {
     canonical: `${siteConfig.url}/about-us`,
+  },
+  openGraph: {
+    title: 'About Hot Natasha | Premium Escort Service in Pune Since 2014',
+    description: 'Pune\'s most trusted escort service since 2014. 7,000+ clients, 200+ verified escorts, 24/7 availability. Discreet, professional, 100% confidential.',
+    url: `${siteConfig.url}/about-us`,
+    siteName: 'Hot Natasha',
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: `${siteConfig.url}/images/banner/escorts-in-pune.webp`,
+        width: 1240,
+        height: 600,
+        alt: 'Hot Natasha — Premium Escort Service in Pune',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Hot Natasha | Premium Escort Service in Pune',
+    description: 'Pune\'s most trusted escort service since 2014. 7,000+ clients, 24/7 availability.',
+    images: [`${siteConfig.url}/images/banner/escorts-in-pune.webp`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 },
   },
 };
 
@@ -38,10 +66,11 @@ export default function AboutPage() {
                 Escorts Services in <span className="text-highlight">Pune</span>
               </h2>
               <p>
-                <Link href="/" className="text-link">Elite Pune Escorts</Link> is a
-                premier escort service provider in Pune, offering high-quality
-                companionship. Our team of escorts is professional, discreet, and
-                dedicated to ensuring customer satisfaction.
+                <Link href="/" className="text-link">Hot Natasha</Link> is
+                Pune&rsquo;s most trusted premium escort service, operating since 2014
+                with over 7,000 satisfied clients. Our team of verified escorts is
+                professional, discreet, and dedicated to ensuring your complete
+                satisfaction.
               </p>
               <p>
                 Our services extend across Pune and nearby regions, maintaining the
@@ -67,7 +96,7 @@ export default function AboutPage() {
 
             <div className="why-choose">
               <h2>
-                Why Choose <span className="text-highlight">Elite Pune Escorts</span>
+                Why Choose <span className="text-highlight">Hot Natasha</span> Escorts
               </h2>
               <div className="accordion">
                 <div className="accordion-item">
